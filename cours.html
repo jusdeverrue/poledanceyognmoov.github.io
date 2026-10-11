@@ -2,359 +2,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="description" content="Cours de pole dance collectifs, privés, duo, semi-privés, parent-enfant, à domicile et en visio à Soulières près d'Épernay.">
 <title>Cours et formules | Yog'n Moov Pole Dance</title>
-<meta name="description" content="Cours de pole dance collectifs, privés, duo, semi-privés, solo, parent-enfant, à domicile, en visio, stages et prestations à Soulières près d'Épernay.">
-
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
 
 <style>
-:root {
-  --noir:#171615;
-  --dore:#c5a15a;
-  --creme:#f7f1e8;
-  --rose:#d9a6af;
-  --rose-clair:#f3e5e7;
-  --blanc:#fffdf9;
-  --texte:#302a25;
-}
-
-* { box-sizing:border-box; }
-
-html { scroll-behavior:smooth; }
-
-body {
-  margin:0;
-  background:var(--creme);
-  color:var(--texte);
-  font-family:'Nunito Sans',Arial,sans-serif;
-  line-height:1.75;
-}
-
-a { color:inherit; }
-
-header {
-  background:var(--noir);
-  color:var(--creme);
-  padding:22px 6%;
-  border-bottom:2px solid var(--dore);
-}
-
-.brand {
-  display:flex;
-  align-items:center;
-  gap:18px;
-  text-decoration:none;
-}
-
-.logo-box {
-  width:115px;
-  height:115px;
-  flex-shrink:0;
-  border-radius:50%;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:5px;
-  border:2px solid var(--dore);
-  box-shadow:0 0 18px rgba(197,161,90,.25);
-}
-
-.logo-box img {
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  border-radius:50%;
-}
-
-.brand-name {
-  font-family:'Kaushan Script',cursive;
-  font-size:clamp(25px,4vw,38px);
-  color:var(--blanc);
-  line-height:1.2;
-}
-
-.brand-name span {
-  display:block;
-  font-family:'Nunito Sans',sans-serif;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:4px;
-  color:var(--dore);
-  margin-top:8px;
-}
-
-nav {
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px 18px;
-  margin-top:22px;
-}
-
-nav a {
-  text-decoration:none;
-  color:var(--creme);
-  font-size:13px;
-}
-
-nav a:hover { color:var(--rose); }
-
-section { padding:48px 8%; }
-
-h1,h2,h3 {
-  font-family:Georgia,'Times New Roman',serif;
-  font-weight:normal;
-  line-height:1.3;
-}
-
-h1 {
-  font-size:clamp(36px,5vw,54px);
-  margin:10px 0 20px;
-}
-
-h2 {
-  font-size:clamp(28px,4vw,38px);
-  margin-top:8px;
-}
-
-h3 { font-size:23px; }
-
-p { margin:12px 0; }
-
-.kicker {
-  color:#9b7739;
-  font-size:11px;
-  font-weight:bold;
-  text-transform:uppercase;
-  letter-spacing:3px;
-}
-
-.hero {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:38px;
-  background:var(--noir);
-  color:var(--creme);
-  padding-top:55px;
-  padding-bottom:55px;
-}
-
-.hero .kicker { color:var(--dore); }
-
-.hero p { color:#e2d9ce; }
-
-.hero-photo {
-  width:100%;
-  height:470px;
-  object-fit:cover;
-  object-position:center;
-  border:2px solid var(--dore);
-}
-
-.lead { font-size:18px; }
-
-.btn {
-  display:inline-block;
-  margin:12px 8px 0 0;
-  padding:12px 20px;
-  background:var(--dore);
-  color:var(--noir);
-  text-decoration:none;
-  font-size:13px;
-  font-weight:bold;
-  border:1px solid var(--dore);
-}
-
-.btn:hover { background:#e6cd94; }
-
-.btn.alt {
-  background:transparent;
-  color:var(--rose);
-  border-color:var(--rose);
-}
-
-.btn.alt:hover {
-  background:var(--rose);
-  color:var(--noir);
-}
-
-.banner {
-  padding:25px 8%;
-  background:var(--dore);
-  text-align:center;
-  color:var(--noir);
-}
-
-.banner p { margin:4px 0; }
-
-.intro {
-  max-width:850px;
-  margin:0 auto 28px;
-}
-
-.center { text-align:center; }
-
-.formulas {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-.formula {
-  padding:24px;
-  background:var(--blanc);
-  border:1px solid #e1d5c5;
-  border-top:3px solid var(--dore);
-}
-
-.formula h3 { margin:0 0 10px; }
-
-.formula p { margin:8px 0; }
-
-.visio {
-  background:var(--noir);
-  color:var(--creme);
-  border:2px solid var(--dore);
-}
-
-.visio h3 { color:var(--dore); }
-
-.visio .kicker { color:var(--rose); }
-
-.visio p { color:#e2d9ce; }
-
-.photo-section {
-  background:var(--blanc);
-  border-top:1px solid #e3d5c8;
-  border-bottom:1px solid #e3d5c8;
-}
-
-.photos {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-  margin-top:28px;
-}
-
-.photos figure {
-  margin:0;
-  padding:9px;
-  background:#fff;
-  border:1px solid #e1d5c5;
-}
-
-.photos img {
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  display:block;
-}
-
-.photos figcaption {
-  padding:12px 6px 5px;
-  font-size:13px;
-}
-
-.note {
-  background:var(--rose-clair);
-  border-left:4px solid var(--rose);
-  padding:18px 22px;
-  margin-top:25px;
-}
-
-.cta {
-  text-align:center;
-  background:var(--noir);
-  color:var(--creme);
-  border-top:3px solid var(--dore);
-}
-
-.cta .kicker { color:var(--dore); }
-
-footer {
-  background:var(--noir);
-  color:#e2d9ce;
-  text-align:center;
-  padding:30px 7%;
-  border-top:1px solid #443b31;
-  font-size:13px;
-}
-
-footer a { color:var(--rose); }
-
-.footer-logo {
-  width:78px;
-  height:78px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:50%;
-  padding:3px;
-  border:1px solid var(--dore);
-}
-
-footer p { margin:10px 0; }
-
-@media(max-width:760px) {
-  header { padding:18px 5%; }
-
-  .logo-box {
-    width:82px;
-    height:82px;
-  }
-
-  .brand { gap:12px; }
-
-  .brand-name span {
-    font-size:10px;
-    letter-spacing:2px;
-  }
-
-  nav { gap:10px 13px; }
-
-  section { padding:38px 6%; }
-
-  .hero {
-    grid-template-columns:1fr;
-    gap:25px;
-  }
-
-  .hero-photo { height:390px; }
-
-  .formulas { grid-template-columns:1fr; }
-
-  .photos { grid-template-columns:1fr; }
-
-  .photos img {
-    height:auto;
-    max-height:500px;
-    object-fit:contain;
-    background:#eee7df;
-  }
+:root{--black:#191716;--cream:#f8f0e4;--white:#fffdfa;--berry:#80334f;--gold:#c7a35d;--text:#332d29;--line:#ded2c2;--pink:#f3e1e6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+a{color:inherit}
+.site-header{background:var(--black);color:var(--cream);border-bottom:4px solid var(--gold);padding:24px max(22px,calc((100% - 1120px)/2)) 26px}
+.brand{display:flex;align-items:center;gap:22px;min-height:150px;margin-bottom:36px}
+.logo{width:150px;height:150px;flex:0 0 150px;object-fit:contain;border-radius:50%;background:#fff;border:3px solid var(--gold)}
+.brand-title{margin:0;color:#fffaf2;font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,5vw,3.25rem);font-style:italic;line-height:1.15}
+.brand-subtitle{margin:10px 0 0;color:var(--gold);font-size:.95rem;letter-spacing:.25em}
+.nav{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center}
+.nav a{color:#f8f0e8;text-decoration:none;font-size:1.05rem;padding:5px 0 8px;border-bottom:4px solid transparent}
+.nav a:hover,.nav a[aria-current=page]{color:#a64a6b;border-bottom-color:var(--berry)}
+.container{width:min(1080px,calc(100% - 40px));margin:0 auto}
+.hero{margin:42px auto 58px;background:var(--black);color:var(--cream);border-radius:7px;padding:clamp(30px,6vw,70px) clamp(22px,6vw,68px);text-align:center;border-bottom:5px solid var(--gold)}
+.eyebrow{margin:0;color:var(--gold);font-size:.86rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+h1{margin:28px auto;color:var(--berry);font-size:clamp(2.45rem,6vw,4rem);line-height:1.2;text-align:center}
+.hero h1{color:var(--cream);max-width:800px}
+.hero p:not(.eyebrow){max-width:760px;margin:14px auto 0;font-size:clamp(1.05rem,2.6vw,1.25rem);text-align:center;color:#e7dfd6}
+.hero .eyebrow{color:var(--gold)}
+.hero .buttons{margin-top:28px}
+.button{display:inline-block;margin:8px 5px;padding:12px 20px;text-decoration:none;font-weight:bold;border:1px solid var(--gold);background:var(--gold);color:var(--black)}
+.button:hover{background:#e6d3a9}
+.button.alt{background:transparent;color:var(--pink);border-color:var(--pink)}
+.button.alt:hover{background:var(--pink);color:var(--black)}
+.banner{background:var(--gold);color:var(--black);padding:22px 20px;text-align:center;margin:-25px 0 48px}
+.banner p{margin:3px auto}
+.section-intro{text-align:center;margin:0 auto 30px;max-width:800px}
+.section-intro .eyebrow{color:#9c814a}
+.section-intro h2{margin:12px 0;color:var(--berry);font-size:clamp(2rem,4.5vw,3rem);line-height:1.2}
+.section-intro p{font-size:1.12rem;margin:0 auto;max-width:740px}
+.formulas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:35px}
+.card{background:var(--white);border:1px solid var(--line);border-top:6px solid var(--gold);padding:30px 28px}
+.card.pink{background:var(--pink);border-top-color:var(--berry)}
+.card.gold{background:#ead6a9;border-top-color:var(--gold)}
+.card.dark{background:var(--black);color:var(--cream);border-color:var(--black);border-top-color:var(--berry)}
+.card h3{margin:0 0 12px;font-size:clamp(1.6rem,3.5vw,2.05rem);line-height:1.25}
+.card p{margin:8px 0;font-size:1.05rem}
+.card .eyebrow{color:#9c814a}
+.card.dark .eyebrow{color:var(--gold)}
+.card a:not(.button){color:var(--berry);font-weight:bold}
+.card.dark a:not(.button){color:var(--pink)}
+.visio{background:var(--black);color:var(--cream);border-top-color:var(--berry)}
+.visio h3{color:var(--gold)}
+.visio p{color:#e7dfd6}
+.visio .button{margin-top:12px}
+.section-intro h2,.section-intro p{text-align:center}
+.photo-section{background:var(--white);padding:48px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.photos figure{margin:0;padding:9px;background:#fff;border:1px solid var(--line)}
+.photos img{width:100%;height:auto;max-height:420px;object-fit:contain;display:block;background:var(--cream)}
+.photos figcaption{padding:12px 6px 5px;font-size:.95rem}
+.note{background:var(--pink);border-left:4px solid var(--berry);padding:18px 22px;margin-top:25px}
+.cta{margin:42px auto 58px;background:var(--black);color:var(--cream);border-radius:7px;border-bottom:5px solid var(--gold);padding:clamp(30px,6vw,60px);text-align:center}
+.cta .eyebrow{color:var(--gold)}
+.cta h2{color:var(--cream);font-size:clamp(2rem,4.5vw,3rem);line-height:1.2}
+.cta p:not(.eyebrow){max-width:740px;margin:14px auto;color:#e7dfd6}
+footer{background:var(--black);color:#e7dfd6;text-align:center;padding:30px 20px;border-top:1px solid #443b31;font-size:.95rem}
+footer a{color:var(--pink)}
+.footer-logo{width:78px;height:78px;object-fit:contain;background:#fff;border-radius:50%;padding:3px;border:1px solid var(--gold)}
+footer p{margin:10px 0}
+@media(max-width:680px){
+.site-header{padding:20px 20px 24px}
+.brand{min-height:0;gap:14px;margin-bottom:35px}
+.logo{width:112px;height:112px;flex-basis:112px}
+.brand-title{font-size:clamp(1.8rem,7vw,2.5rem)}
+.brand-subtitle{font-size:.8rem;letter-spacing:.2em}
+.nav{gap:10px 19px}
+.nav a{font-size:1rem}
+.container{width:calc(100% - 24px)}
+.hero{margin:20px auto 42px;padding:34px 22px}
+.hero h1{margin:25px auto}
+.banner{margin:-15px 0 35px;padding:20px 16px}
+.formulas{grid-template-columns:1fr;gap:16px}
+.card{padding:27px 22px}
+.photos{grid-template-columns:1fr}
+.photos img{max-height:none}
+.button{width:100%;text-align:center;margin:8px 0}
+.cta{margin:25px auto 42px;padding:34px 22px}
 }
 </style>
 </head>
 
 <body>
-
-<header>
-  <a class="brand" href="index.html">
-    <span class="logo-box">
-      <img src="logo-yognmoov.png" alt="Logo Yog'n Moov">
-    </span>
-    <span class="brand-name">
-      Yog'n Moov
-      <span>Pole Dance</span>
-    </span>
-  </a>
-
-  <nav aria-label="Navigation principale">
+<header class="site-header">
+  <div class="brand">
+    <img class="logo" src="logo-yognmoov.png" alt="Logo Yog'n Moov">
+    <div>
+      <p class="brand-title">Yog'n Moov</p>
+      <p class="brand-subtitle">POLE DANCE</p>
+    </div>
+  </div>
+  <nav class="nav" aria-label="Navigation principale">
     <a href="index.html">Accueil</a>
     <a href="pole.html">La pole</a>
     <a href="cours.html" aria-current="page">Cours</a>
@@ -367,189 +114,155 @@ footer p { margin:10px 0; }
   </nav>
 </header>
 
-<main>
-
-<section class="hero">
-  <div>
-    <p class="kicker">Cours et formules</p>
+<main class="container">
+  <section class="hero">
+    <p class="eyebrow">Cours et formules</p>
     <h1>Une formule pour chaque envie</h1>
-
-    <p class="lead">
-      Découvrir, pratiquer régulièrement, venir avec une amie, travailler un objectif ou pratiquer chez vous : il existe plusieurs façons de pratiquer avec Yog'n Moov.
-    </p>
-
-    <p>
-      En studio, à domicile ou en visio, choisissez le format qui vous correspond. L'objectif : apprendre, progresser et prendre plaisir à bouger dans un cadre bienveillant.
-    </p>
-
-    <a class="btn" href="#formules">Découvrir les formules</a>
-    <a class="btn alt" href="contact.html">Me contacter</a>
-  </div>
-
-  <img class="hero-photo" src="pole-photo-5.jpg"
-       alt="Cours de pole dance dans le studio Yog'n Moov à Soulières">
-</section>
-
-<div class="banner">
-  <p><strong>Des cours à taille humaine, dans une ambiance conviviale.</strong></p>
-  <p>À Soulières, à environ 15 minutes d'Épernay, sur rendez-vous selon les disponibilités.</p>
-</div>
-
-<section id="formules">
-  <div class="intro">
-    <p class="kicker">Choisissez votre formule</p>
-    <h2>La pole dance à votre rythme</h2>
-    <p>
-      Que vous souhaitiez découvrir la discipline, venir accompagnée ou bénéficier d'un suivi individuel, plusieurs formats sont possibles.
-    </p>
-  </div>
-
-  <div class="formulas">
-
-    <article class="formula">
-      <h3>Cours collectifs</h3>
-      <p>4 à 5 personnes maximum, pour apprendre progressivement et partager la bonne humeur du groupe.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Cours privés</h3>
-      <p>Un cours rien que pour vous, adapté à votre objectif : débuter tranquillement, travailler une figure, progresser sur un point précis.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Cours duo</h3>
-      <p>Venez à deux, avec une amie, votre partenaire ou un proche, avec un accompagnement personnalisé.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Semi-privé</h3>
-      <p>2 ou 3 personnes de votre choix, pour une séance plus personnalisée qu'un cours collectif.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Cours solo</h3>
-      <p>Pour les timides ou celles qui n'osent pas encore rejoindre un groupe : un cadre rassurant, sans comparaison.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Parent / enfant</h3>
-      <p>Dès 6 ans avec un parent, 1 heure autour du mouvement, de la découverte et de la confiance. Dates et horaires selon disponibilités.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Cours à domicile</h3>
-      <p>Vous avez une barre chez vous ? Je me déplace, avec des conseils adaptés à votre installation.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Cours avec podium</h3>
-      <p>Des prestations spécifiques peuvent être organisées selon votre projet.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Stages et cours découverte</h3>
-      <p>Pour tester avant de vous engager, dans un format court et accessible. Contactez-moi pour connaître les prochaines dates.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Je me déplace</h3>
-      <p>Animation, cours ou événement dans votre structure : parlons-en, chaque projet est étudié.</p>
-    </article>
-
-    <article class="formula">
-      <h3>Coaching à distance</h3>
-      <p>Une prestation à part, pour celles qui pratiquent chez elles. <a href="coaching.html">En savoir plus</a>.</p>
-    </article>
-
-    <article class="formula visio">
-      <p class="kicker">Depuis chez vous</p>
-      <h3>Cours de pole dance en visio</h3>
-      <p>
-        Vous disposez d'une barre chez vous et souhaitez être accompagnée à distance ? Profitez d'un coaching en visio pour travailler votre technique et avancer sur vos objectifs.
-      </p>
-      <p>
-        Nous échangeons sur vos attentes, votre expérience et votre installation afin d'adapter la séance au mieux à votre pratique.
-      </p>
-      <p>
-        Les cours en visio nécessitent un espace dégagé et une installation adaptée. Les figures sont choisies en fonction des conditions de sécurité et ne sont pas toutes adaptées à une supervision à distance.
-      </p>
-      <p>Sur rendez-vous, selon les disponibilités.</p>
-      <a class="btn" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Demander un cours en visio</a>
-    </article>
-
-  </div>
-
-  <p style="margin-top:30px;">
-    <a class="btn" href="tarifs.html">Consulter les tarifs</a>
-    <a class="btn alt" href="contact.html">Me contacter</a>
-  </p>
-</section>
-
-<section class="photo-section">
-  <div class="intro center">
-    <p class="kicker">Le studio en images</p>
-    <h2>Une pratique, des rencontres et des progrès</h2>
-    <p>
-      En solo ou à deux, chaque séance est l'occasion de découvrir de nouvelles sensations et d'avancer à son rythme.
-    </p>
-  </div>
-
-  <div class="photos">
-    <figure>
-      <img src="pole-photo-6.jpg" alt="Figure de pole dance au studio Yog'n Moov">
-      <figcaption>Travailler la force, la coordination et la technique.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="pole-photo-7.jpg" alt="Deux participantes pratiquant ensemble la pole dance">
-      <figcaption>Partager la découverte et progresser ensemble.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="pole-photo-5.jpg" alt="Pratique de la pole dance dans le studio à Soulières">
-      <figcaption>Découvrir la discipline dans un studio à taille humaine.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section>
-  <div class="intro">
-    <p class="kicker">Comment réserver ?</p>
-    <h2>Parlons de votre projet</h2>
-    <p>
-      Les créneaux étant limités, les réservations se font directement auprès de moi. Contactez-moi pour connaître les disponibilités et choisir la formule qui vous convient.
-    </p>
-
-    <div class="note">
-      <strong>Une question avant de vous lancer ?</strong><br>
-      Vous pouvez me préciser si vous souhaitez venir seule, à deux, en famille ou pratiquer depuis chez vous.
+    <p>Découvrir, pratiquer régulièrement, venir avec une amie, travailler un objectif ou pratiquer chez vous : il existe plusieurs façons de pratiquer avec Yog'n Moov.</p>
+    <p>En studio, à domicile ou en visio, choisissez le format qui vous correspond. L'objectif : apprendre, progresser et prendre plaisir à bouger dans un cadre bienveillant.</p>
+    <div class="buttons">
+      <a class="button" href="#formules">Découvrir les formules</a>
+      <a class="button alt" href="contact.html">Me contacter</a>
     </div>
+  </section>
+
+  <div class="banner">
+    <p><strong>Des cours à taille humaine, dans une ambiance conviviale.</strong></p>
+    <p>À Soulières, à environ 15 minutes d'Épernay, sur rendez-vous selon les disponibilités.</p>
   </div>
-</section>
 
-<section class="cta">
-  <p class="kicker">Yog'n Moov Pole Dance</p>
-  <h2>Prête à essayer ?</h2>
-  <p>Contactez-moi par téléphone ou WhatsApp pour organiser votre séance.</p>
+  <section id="formules">
+    <div class="section-intro">
+      <p class="eyebrow">Choisissez votre formule</p>
+      <h2>La pole dance à votre rythme</h2>
+      <p>Que vous souhaitiez découvrir la discipline, venir accompagnée ou bénéficier d'un suivi individuel, plusieurs formats sont possibles.</p>
+    </div>
 
-  <a class="btn" href="tel:+33632514950">Appeler le 06 32 51 49 50</a>
-  <a class="btn alt" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
-</section>
+    <div class="formulas">
+      <article class="card">
+        <h3>Cours collectifs</h3>
+        <p>4 à 5 personnes maximum, pour apprendre progressivement et partager la bonne humeur du groupe.</p>
+      </article>
 
+      <article class="card pink">
+        <h3>Cours privés</h3>
+        <p>Un cours rien que pour vous, adapté à votre objectif : débuter tranquillement, travailler une figure, progresser sur un point précis.</p>
+      </article>
+
+      <article class="card gold">
+        <h3>Cours duo</h3>
+        <p>Venez à deux, avec une amie, votre partenaire ou un proche, avec un accompagnement personnalisé.</p>
+      </article>
+
+      <article class="card dark">
+        <h3>Semi-privé</h3>
+        <p>2 ou 3 personnes de votre choix, pour une séance plus personnalisée qu'un cours collectif.</p>
+      </article>
+
+      <article class="card">
+        <h3>Cours solo</h3>
+        <p>Pour les personnes qui n'osent pas encore rejoindre un groupe : un cadre rassurant, sans comparaison.</p>
+      </article>
+
+      <article class="card pink">
+        <h3>Parent / enfant</h3>
+        <p>Dès 6 ans avec un parent, une heure autour du mouvement, de la découverte et de la confiance. Dates et horaires selon disponibilités.</p>
+      </article>
+
+      <article class="card">
+        <h3>Cours à domicile</h3>
+        <p>Vous avez une barre chez vous ? Je me déplace, avec des conseils adaptés à votre installation.</p>
+      </article>
+
+      <article class="card gold">
+        <h3>Cours avec podium</h3>
+        <p>Des prestations spécifiques peuvent être organisées selon votre projet.</p>
+      </article>
+
+      <article class="card">
+        <h3>Stages et cours découverte</h3>
+        <p>Pour tester avant de vous engager, dans un format court et accessible. Contactez-moi pour connaître les prochaines dates.</p>
+      </article>
+
+      <article class="card pink">
+        <h3>Je me déplace</h3>
+        <p>Animation, cours ou événement dans votre structure : parlons-en, chaque projet est étudié.</p>
+      </article>
+
+      <article class="card">
+        <h3>Coaching à distance</h3>
+        <p>Une prestation à part, pour les personnes qui pratiquent chez elles. <a href="coaching.html">En savoir plus</a>.</p>
+      </article>
+
+      <article class="card dark visio">
+        <p class="eyebrow">Depuis chez vous</p>
+        <h3>Cours de pole dance en visio</h3>
+        <p>Vous disposez d'une barre chez vous et souhaitez être accompagnée à distance ? Profitez d'un coaching en visio pour travailler votre technique et avancer sur vos objectifs.</p>
+        <p>Nous échangeons sur vos attentes, votre expérience et votre installation afin d'adapter la séance au mieux à votre pratique.</p>
+        <p>Les cours en visio nécessitent un espace dégagé et une installation adaptée. Les figures sont choisies en fonction des conditions de sécurité et ne sont pas toutes adaptées à une supervision à distance.</p>
+        <p>Sur rendez-vous, selon les disponibilités.</p>
+        <a class="button" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Demander un cours en visio</a>
+      </article>
+    </div>
+
+    <div class="section-intro">
+      <a class="button" href="tarifs.html">Consulter les tarifs</a>
+      <a class="button alt" href="contact.html">Me contacter</a>
+    </div>
+  </section>
+
+  <section class="photo-section">
+    <div class="section-intro">
+      <p class="eyebrow">Le studio en images</p>
+      <h2>Une pratique, des rencontres et des progrès</h2>
+      <p>En solo ou à deux, chaque séance est l'occasion de découvrir de nouvelles sensations et d'avancer à son rythme.</p>
+    </div>
+
+    <div class="photos">
+      <figure>
+        <img src="pole-photo-6.jpg" alt="Figure de pole dance au studio Yog'n Moov">
+        <figcaption>Travailler la force, la coordination et la technique.</figcaption>
+      </figure>
+      <figure>
+        <img src="pole-photo-7.jpg" alt="Deux participantes pratiquant ensemble la pole dance">
+        <figcaption>Partager la découverte et progresser ensemble.</figcaption>
+      </figure>
+      <figure>
+        <img src="pole-photo-5.jpg" alt="Pratique de la pole dance dans le studio à Soulières">
+        <figcaption>Découvrir la discipline dans un studio à taille humaine.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-intro">
+      <p class="eyebrow">Comment réserver ?</p>
+      <h2>Parlons de votre projet</h2>
+      <p>Les créneaux étant limités, les réservations se font directement auprès de moi. Contactez-moi pour connaître les disponibilités et choisir la formule qui vous convient.</p>
+      <div class="note">
+        <strong>Une question avant de vous lancer ?</strong><br>
+        Vous pouvez me préciser si vous souhaitez venir seule, à deux, en famille ou pratiquer depuis chez vous.
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <p class="eyebrow">Yog'n Moov Pole Dance</p>
+    <h2>Prêt·e à essayer ?</h2>
+    <p>Contactez-moi par téléphone ou WhatsApp pour organiser votre séance.</p>
+    <a class="button" href="tel:+33632514950">Appeler le 06 32 51 49 50</a>
+    <a class="button alt" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+  </section>
 </main>
 
 <footer>
   <img class="footer-logo" src="logo-yognmoov.png" alt="Logo Yog'n Moov">
-
   <p><strong>Yog'n Moov · Pole Dance</strong></p>
   <p>Soulières (51130), à 15 min d'Épernay · 06 32 51 49 50</p>
-
   <p>Pratique sportive et de bien-être, adaptée à chacun. Elle ne remplace pas l'avis d'un médecin.</p>
-
   <p><a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">Yog'n Moov : yoga, Pilates, méditation</a></p>
-
+  <p><a href="https://www.facebook.com/share/17JPoeD2sn/" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://instagram.com/yognmoov_julie" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.tiktok.com/@yogn.moov" target="_blank" rel="noopener noreferrer">TikTok</a></p>
   <p><a href="index.html">Accueil</a> · <a href="pole.html">La pole</a> · <a href="contact.html">Contact</a></p>
 </footer>
-
 </body>
 </html>
