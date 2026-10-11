@@ -11,14 +11,14 @@
 
   <style>
     :root {
-      --black: #171615;
-      --gold: #c5a15a;
-      --gold-light: #e4cc94;
-      --cream: #f5efe6;
-      --white: #fffdf9;
-      --pink: #d9a6af;
-      --pink-light: #f0dfe1;
-      --text: #302a25;
+      --black: #191716;
+      --cream: #f8f0e4;
+      --white: #fffdfa;
+      --berry: #80334f;
+      --gold: #c7a35d;
+      --pink: #f3e1e6;
+      --text: #332d29;
+      --line: #ded2c2;
     }
 
     * {
@@ -41,51 +41,72 @@
       color: inherit;
     }
 
-    header {
+    /* EN-TÊTE COMMUN AUX PAGES DU SITE */
+
+    .site-header {
       background: var(--black);
       color: var(--cream);
-      padding: 22px 6%;
-      border-bottom: 2px solid var(--gold);
+      border-bottom: 4px solid var(--gold);
+      padding: 24px max(22px, calc((100% - 1120px) / 2)) 26px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      min-height: 150px;
+      margin-bottom: 36px;
     }
 
     .logo {
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .logo img {
       display: block;
-      width: 190px;
-      max-width: 100%;
-      height: auto;
-      max-height: 100px;
+      width: 150px;
+      height: 150px;
+      flex: 0 0 150px;
       object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid var(--gold);
     }
 
-    .brand-caption {
-      display: block;
-      margin-top: 8px;
-      color: var(--pink);
-      font-size: 10px;
-      letter-spacing: 4px;
+    .brand-title {
+      margin: 0;
+      color: #fffaf2;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-style: italic;
+      line-height: 1.15;
     }
 
-    nav {
+    .brand-subtitle {
+      margin: 10px 0 0;
+      color: var(--gold);
+      font-size: .95rem;
+      letter-spacing: .25em;
+    }
+
+    .nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 18px;
-      margin-top: 20px;
+      gap: 10px 28px;
+      align-items: center;
     }
 
-    nav a {
+    .nav a {
+      color: #f8f0e8;
       text-decoration: none;
-      color: var(--cream);
-      font-size: 13px;
+      font-size: 1.05rem;
+      padding: 5px 0 8px;
+      border-bottom: 4px solid transparent;
     }
 
-    nav a:hover {
-      color: var(--pink);
+    .nav a:hover,
+    .nav a[aria-current="page"] {
+      color: #e7b6c5;
+      border-bottom-color: var(--berry);
     }
+
+    /* CONTENU */
 
     section {
       padding: 60px 8%;
@@ -102,11 +123,13 @@
       padding-bottom: 70px;
     }
 
+    /* Photo entière, sans recadrage */
     .hero img {
       display: block;
       width: 100%;
-      max-height: 540px;
-      object-fit: cover;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
       object-position: center;
       border: 1px solid var(--gold);
     }
@@ -155,15 +178,15 @@
       background: var(--gold);
       color: var(--black);
       text-decoration: none;
-      padding: 13px 22px;
-      margin: 8px 8px 8px 0;
+      padding: 12px 20px;
+      margin: 8px 5px;
       font-size: 13px;
       font-weight: bold;
       border: 1px solid var(--gold);
     }
 
     .btn:hover {
-      background: var(--gold-light);
+      background: #e6d3a9;
     }
 
     .btn.alt {
@@ -228,28 +251,28 @@
     }
 
     .door h2 {
-      color: var(--gold-light);
+      color: var(--gold);
     }
 
     .door.alt {
-      background: var(--pink-light);
+      background: var(--pink);
       color: var(--text);
     }
 
     .door.alt h2 {
-      color: #77505a;
+      color: var(--berry);
     }
 
     .soft {
       background: var(--white);
-      border-top: 1px solid #dfc6c8;
-      border-bottom: 1px solid #dfc6c8;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
     .pink-band {
-      background: var(--pink-light);
-      border-top: 2px solid var(--pink);
-      border-bottom: 2px solid var(--pink);
+      background: var(--pink);
+      border-top: 2px solid #d9a6af;
+      border-bottom: 2px solid #d9a6af;
     }
 
     footer {
@@ -266,7 +289,7 @@
     }
 
     .footer-brand {
-      color: var(--gold-light);
+      color: var(--gold);
       font-family: Georgia, "Times New Roman", serif;
       font-size: 27px;
       font-weight: bold;
@@ -281,7 +304,7 @@
     }
 
     .footer-yoga h3 {
-      color: var(--gold-light);
+      color: var(--gold);
       font-size: 23px;
       margin: 5px 0 10px;
     }
@@ -289,7 +312,7 @@
     .footer-yoga a {
       display: inline-block;
       margin-top: 8px;
-      color: var(--gold-light);
+      color: var(--gold);
       font-weight: bold;
       text-decoration: none;
     }
@@ -299,16 +322,37 @@
     }
 
     @media (max-width: 760px) {
-      header {
-        padding: 20px 6%;
+      .site-header {
+        padding: 20px 20px 24px;
       }
 
-      .logo img {
-        width: 165px;
+      .brand {
+        min-height: 0;
+        gap: 14px;
+        margin-bottom: 35px;
       }
 
-      nav {
-        gap: 12px 15px;
+      .logo {
+        width: 112px;
+        height: 112px;
+        flex-basis: 112px;
+      }
+
+      .brand-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+      }
+
+      .brand-subtitle {
+        font-size: .8rem;
+        letter-spacing: .2em;
+      }
+
+      .nav {
+        gap: 10px 19px;
+      }
+
+      .nav a {
+        font-size: 1rem;
       }
 
       .hero,
@@ -322,7 +366,10 @@
       }
 
       .hero img {
-        max-height: 420px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
       }
 
       section {
@@ -332,30 +379,38 @@
       h1 {
         font-size: 42px;
       }
+
+      .btn {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <a class="logo" href="index.html" aria-label="Yog’n Moov - Accueil">
+<header class="site-header">
+  <div class="brand">
     <img
-      src="logo_yognmoov_noir_transparent.png"
-      alt="Logo Yog’n Moov"
+      class="logo"
+      src="logo-yognmoov.png"
+      alt="Logo Yog'n Moov"
     >
-    <span class="brand-caption">POLE DANCE · SOULIÈRES</span>
-  </a>
+    <div>
+      <p class="brand-title">Yog'n Moov</p>
+      <p class="brand-subtitle">POLE DANCE</p>
+    </div>
+  </div>
 
-  <nav>
-    <a href="index.html">Accueil</a>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="index.html" aria-current="page">Accueil</a>
     <a href="pole.html">La pole</a>
-    <a href="cours.html">Les cours</a>
+    <a href="cours.html">Cours</a>
     <a href="coaching.html">Coaching</a>
     <a href="tarifs.html">Tarifs</a>
     <a href="avis.html">Avis</a>
-    <a href="julie.html">À propos</a>
-    <a href="studio.html">Le studio</a>
+    <a href="julie.html">Julie</a>
+    <a href="studio.html">Studio</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
@@ -384,7 +439,7 @@
 
     <img
       src="studio-assise.jpg"
-      alt="Le studio de pole dance Yog’n Moov à Soulières"
+      alt="Julie dans le studio de pole dance Yog'n Moov à Soulières"
     >
   </section>
 
@@ -498,7 +553,7 @@
 </main>
 
 <footer>
-  <p class="footer-brand">Yog’n Moov</p>
+  <p class="footer-brand">Yog'n Moov</p>
 
   <p>Pole dance · Soulières (51130), près d’Épernay</p>
 
@@ -509,7 +564,7 @@
   </p>
 
   <div class="footer-yoga">
-    <h3>Yog’n Moov · Yoga, Pilates et méditation</h3>
+    <h3>Yog'n Moov · Yoga, Pilates et méditation</h3>
     <p>
       Retrouvez également mes activités de yoga, Pilates et méditation
       sur le site dédié.
@@ -522,9 +577,9 @@
   <p>
     <a href="https://www.facebook.com/share/17JPoeD2sn/">Facebook</a>
     ·
-    <a href="https://instagram.com/yognmoov_julie?rpxt=eHNpNGN0bmpyZjcz">Instagram</a>
+    <a href="https://instagram.com/yognmoov_julie">Instagram</a>
     ·
-    <a href="https://www.tiktok.com/@yogn.moov?_r=1&_t=ZN-9AP1Zvefj8Q">TikTok</a>
+    <a href="https://www.tiktok.com/@yogn.moov">TikTok</a>
   </p>
 </footer>
 
