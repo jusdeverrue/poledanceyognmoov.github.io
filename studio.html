@@ -3,537 +3,112 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Le studio Yog'n Moov | Pole Dance, Yoga et Pilates à Soulières</title>
-  <meta name="description" content="Découvrez le studio Yog'n Moov à Soulières, près d'Épernay : pole dance, yoga, Pilates, souplesse et bien-être en petits groupes dans une ambiance conviviale.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Découvrez le studio Yog'n Moov à Soulières, près d'Épernay : pole dance, yoga, Pilates, souplesse et bien-être en petits groupes.">
+  <title>Le studio | Yog'n Moov Pole Dance</title>
 
   <style>
-    :root {
-      --black: #191716;
-      --cream: #f8f0e4;
-      --white: #ffffff;
-      --berry: #80334f;
-      --gold: #c7a35d;
-      --pink: #d9a6af;
-      --text: #302b28;
-      --muted: #6e6560;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.7;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* EN-TÊTE */
-
-    .header {
-      background: var(--black);
-      color: var(--cream);
-      border-bottom: 6px solid var(--gold);
-    }
-
-    .header-inner {
-      max-width: 1150px;
-      margin: auto;
-      padding: 35px 36px 30px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .logo {
-      width: 158px;
-      height: 158px;
-      object-fit: contain;
-      background: transparent;
-      border: none;
-      border-radius: 0;
-      flex-shrink: 0;
-    }
-
-    .brand {
-      flex: 1;
-    }
-
-    .brand h1 {
-      color: var(--cream);
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-weight: normal;
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.2;
-      letter-spacing: 0;
-    }
-
-    .brand p {
-      color: var(--gold);
-      font-size: 19px;
-      letter-spacing: 5px;
-      margin-top: 10px;
-      text-transform: uppercase;
-    }
-
-    nav {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0;
-      padding: 12px 36px 45px;
-      background: var(--black);
-      border-top: none;
-    }
-
-    nav a {
-      color: var(--cream);
-      font-size: 19px;
-      padding: 8px 0 13px;
-      margin-right: 30px;
-      margin-bottom: 15px;
-      border-bottom: 6px solid transparent;
-      transition: color 0.2s;
-    }
-
-    nav a:hover,
-    nav a:focus,
-    nav a.active {
-      color: var(--pink);
-      border-bottom-color: var(--berry);
-    }
-
-    /* INTRODUCTION */
-
-    .hero {
-      background: var(--black);
-      color: var(--white);
-      text-align: center;
-      padding: 65px 22px 75px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 22px;
-    }
-
-    .hero h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-      font-size: clamp(32px, 5vw, 49px);
-      line-height: 1.2;
-      max-width: 850px;
-      margin: 0 auto 25px;
-    }
-
-    .hero p:not(.eyebrow) {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 18px;
-      color: #eee4d9;
-    }
-
-    /* SECTIONS */
-
-    .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 65px 24px;
-    }
-
-    .section h2 {
-      color: var(--black);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(29px, 4vw, 38px);
-      font-weight: normal;
-      line-height: 1.25;
-      margin-bottom: 22px;
-    }
-
-    .section h3 {
-      color: var(--berry);
-      font-size: 21px;
-      margin-bottom: 12px;
-    }
-
-    .section p {
-      margin-bottom: 16px;
-    }
-
-    .intro-grid,
-    .studio-grid,
-    .yoga-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 38px;
-      align-items: center;
-    }
-
-    .photo {
-      width: 100%;
-      height: 390px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    .photo-tall {
-      height: 430px;
-    }
-
-    .label {
-      display: inline-block;
-      color: var(--berry);
-      background: var(--pink);
-      padding: 6px 13px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    /* PARTIE FOND NOIR */
-
-    .dark-section {
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .dark-section .section {
-      padding-top: 65px;
-      padding-bottom: 65px;
-    }
-
-    .dark-section h2 {
-      color: var(--cream);
-    }
-
-    .dark-section h3 {
-      color: var(--gold);
-    }
-
-    .dark-section p {
-      color: #eee4d9;
-    }
-
-    /* LES VALEURS DU STUDIO */
-
-    .values {
-      background: var(--white);
-    }
-
-    .values-inner {
-      max-width: 1100px;
-      margin: auto;
-      padding: 65px 24px;
-    }
-
-    .values-inner > h2 {
-      text-align: center;
-      color: var(--black);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(29px, 4vw, 38px);
-      font-weight: normal;
-      margin-bottom: 12px;
-    }
-
-    .values-intro {
-      max-width: 760px;
-      margin: 0 auto 32px;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--cream);
-      border-top: 4px solid var(--gold);
-      padding: 25px 22px;
-      border-radius: 8px;
-    }
-
-    .card h3 {
-      color: var(--berry);
-      margin-bottom: 10px;
-      font-size: 19px;
-    }
-
-    .card p {
-      font-size: 15px;
-      margin: 0;
-    }
-
-    /* LES ACTIVITÉS */
-
-    .activities {
-      background: var(--pink);
-    }
-
-    .activities-inner {
-      max-width: 1100px;
-      padding: 65px 24px;
-      margin: auto;
-    }
-
-    .activities-inner > h2 {
-      color: var(--black);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(29px, 4vw, 38px);
-      font-weight: normal;
-      margin-bottom: 15px;
-    }
-
-    .activities-intro {
-      max-width: 800px;
-      margin-bottom: 30px;
-    }
-
-    .activity-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .activity {
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 9px;
-      padding: 22px;
-    }
-
-    .activity h3 {
-      color: var(--berry);
-      font-size: 19px;
-      margin-bottom: 7px;
-    }
-
-    .activity p {
-      margin: 0;
-    }
-
-    /* CONTACT */
-
-    .cta {
-      background: var(--berry);
-      color: var(--white);
-      text-align: center;
-      padding: 60px 22px;
-    }
-
-    .cta h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(29px, 4vw, 38px);
-      font-weight: normal;
-      margin-bottom: 14px;
-    }
-
-    .cta p {
-      max-width: 720px;
-      margin: 0 auto 24px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: transform 0.2s;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button-gold {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .button-light {
-      border: 1px solid var(--white);
-      color: var(--white);
-    }
-
-    /* PIED DE PAGE */
-
-    footer {
-      background: var(--black);
-      color: #e9dfd5;
-      text-align: center;
-      padding: 27px 20px;
-      font-size: 13px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    footer a {
-      color: var(--gold);
-    }
-
-    /* AFFICHAGE MOBILE */
-
-    @media (max-width: 760px) {
-      .header-inner {
-        flex-direction: row;
-        text-align: left;
-        padding: 45px 36px 35px;
-        gap: 22px;
-      }
-
-      .logo {
-        width: 154px;
-        height: 154px;
-      }
-
-      .brand h1 {
-        font-size: 37px;
-      }
-
-      .brand p {
-        font-size: 17px;
-        letter-spacing: 4px;
-      }
-
-      nav {
-        justify-content: flex-start;
-        padding: 10px 36px 42px;
-        gap: 0;
-      }
-
-      nav a {
-        font-size: 19px;
-        margin-right: 30px;
-        margin-bottom: 15px;
-        padding: 8px 0 13px;
-      }
-
-      .hero {
-        padding: 55px 22px 60px;
-      }
-
-      .section,
-      .dark-section .section,
-      .values-inner,
-      .activities-inner {
-        padding: 45px 20px;
-      }
-
-      .intro-grid,
-      .studio-grid,
-      .yoga-grid,
-      .cards,
-      .activity-list {
-        grid-template-columns: 1fr;
-      }
-
-      .intro-grid,
-      .studio-grid,
-      .yoga-grid {
-        gap: 24px;
-      }
-
-      .photo,
-      .photo-tall {
-        height: auto;
-        max-height: 480px;
-        aspect-ratio: 4 / 5;
-      }
-
-      .cta {
-        padding: 48px 20px;
-      }
-    }
-
-    @media (max-width: 390px) {
-      .header-inner {
-        padding: 35px 22px 28px;
-        gap: 15px;
-      }
-
-      .logo {
-        width: 115px;
-        height: 115px;
-      }
-
-      .brand h1 {
-        font-size: 29px;
-      }
-
-      .brand p {
-        font-size: 13px;
-        letter-spacing: 3px;
-      }
-
-      nav {
-        padding: 10px 22px 30px;
-      }
-
-      nav a {
-        font-size: 17px;
-        margin-right: 23px;
-        margin-bottom: 12px;
-      }
+    :root{--black:#191716;--cream:#f8f0e4;--white:#fffdfa;--berry:#80334f;--gold:#c7a35d;--text:#332d29;--line:#ded2c2;--pink:#f3e1e6}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+
+    .site-header{background:var(--black);color:var(--cream);border-bottom:4px solid var(--gold);padding:24px max(22px,calc((100% - 1120px)/2)) 26px}
+    .brand{display:flex;align-items:center;gap:22px;min-height:150px;margin-bottom:36px}
+    .logo{width:150px;height:150px;flex:0 0 150px;object-fit:contain;border-radius:50%;background:#fff;border:3px solid var(--gold)}
+    .brand-title{margin:0;color:#fffaf2;font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,5vw,3.25rem);font-style:italic;line-height:1.15}
+    .brand-subtitle{margin:10px 0 0;color:var(--gold);font-size:.95rem;letter-spacing:.25em}
+    .nav{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center}
+    .nav a{color:#f8f0e8;text-decoration:none;font-size:1.05rem;padding:5px 0 8px;border-bottom:4px solid transparent}
+    .nav a:hover,.nav a[aria-current=page]{color:#a64a6b;border-bottom-color:var(--berry)}
+
+    .container{width:min(1080px,calc(100% - 40px));margin:0 auto}
+    .hero{margin:42px auto 58px;background:var(--black);color:var(--cream);border-radius:7px;padding:clamp(30px,6vw,70px) clamp(22px,6vw,68px);text-align:center;border-bottom:5px solid var(--gold)}
+    .eyebrow{margin:0;color:var(--gold);font-size:.86rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+    h1{margin:35px auto 30px;max-width:760px;color:var(--berry);font-size:clamp(2.45rem,6vw,4rem);line-height:1.2;text-align:center}
+    .hero p:not(.eyebrow){max-width:760px;margin:14px auto 0;font-size:clamp(1.05rem,2.6vw,1.35rem);text-align:center;color:#e7dfd6}
+
+    .section-intro{text-align:center;margin:0 auto 30px;max-width:800px}
+    .section-intro .eyebrow{color:#9c814a}
+    .section-intro h2{margin:12px 0;color:var(--berry);font-size:clamp(2rem,4.5vw,3rem);line-height:1.2}
+    .section-intro p{font-size:1.12rem;margin:0 auto;max-width:740px}
+
+    .studio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:58px;align-items:stretch}
+    .card{background:var(--white);border:1px solid var(--line);border-top:6px solid var(--gold);padding:30px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0}
+    .card.pink{background:var(--pink);border-top-color:var(--berry)}
+    .card.gold{background:#ead6a9;border-top-color:var(--gold)}
+    .card.dark{background:var(--black);color:var(--cream);border-color:var(--black);border-top-color:var(--berry)}
+    .card h3{margin:0 0 12px;font-size:clamp(1.6rem,3.5vw,2.05rem);line-height:1.25}
+    .card p{max-width:440px;margin:0;font-size:1.08rem}
+    .card p+p{margin-top:14px}
+    .card h3 + p{margin-top:0}
+
+    .photo-card{padding:0;overflow:hidden;justify-content:flex-start}
+    .photo-card img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:var(--cream)}
+    .photo-caption{padding:24px 25px 28px;width:100%}
+    .photo-caption h3{color:var(--berry)}
+    .photo-card.dark .photo-caption h3{color:var(--gold)}
+    .photo-card.dark .photo-caption p{color:var(--cream)}
+
+    .other{background:#ead6a9;border-top:6px solid var(--gold);padding:clamp(26px,5vw,46px);text-align:center;margin-bottom:30px}
+    .studio-perks{background:var(--pink);border-top:6px solid var(--berry);padding:clamp(26px,5vw,42px);text-align:center;margin:0 0 30px}
+    .studio-perks h2{margin:12px 0;color:var(--berry);font-size:clamp(1.9rem,4.5vw,2.6rem);line-height:1.2}
+    .studio-perks p{max-width:760px;margin:10px auto;font-size:1.08rem}
+    .disciplines{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:20px auto}
+    .disciplines span{display:inline-block;background:var(--white);border:1px solid rgba(51,45,41,.16);padding:9px 18px;font-weight:700}
+
+    .other h2,.contact h2{margin:12px 0;color:var(--berry);font-size:clamp(2rem,4.5vw,2.8rem);line-height:1.2}
+    .other p{max-width:760px;margin:8px auto;font-size:1.08rem}
+    .service-list{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:22px auto}
+    .service-list li{background:var(--white);border:1px solid rgba(51,45,41,.18);padding:9px 15px;font-weight:700}
+
+    .contact{background:var(--black);color:var(--cream);border-top:6px solid var(--berry);padding:clamp(28px,5vw,48px);text-align:center;margin-bottom:42px}
+    .contact h2{color:#e2bd71}
+    .contact p{max-width:780px;margin:12px auto;font-size:1.08rem}
+    .contact .availability{color:#f0cbd7;font-weight:700}
+    .buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:26px}
+    .button{display:inline-flex;justify-content:center;align-items:center;min-height:54px;min-width:210px;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:800;border:2px solid var(--gold);transition:transform .15s ease}
+    .button:hover{transform:translateY(-2px)}
+    .button.email{background:var(--gold);color:var(--black)}
+    .button.sms{background:transparent;color:#f0cbd7;border-color:#a64a6b}
+
+    footer{background:var(--black);color:var(--cream);border-top:4px solid var(--gold);padding:28px 18px;text-align:center;font-size:.92rem}
+    footer p{margin:5px 0}
+    footer a{color:#e2bd71}
+
+    @media(max-width:680px){
+      .site-header{padding:20px 20px 24px}
+      .brand{min-height:0;gap:14px;margin-bottom:35px}
+      .logo{width:112px;height:112px;flex-basis:112px}
+      .brand-title{font-size:clamp(1.8rem,7vw,2.5rem)}
+      .brand-subtitle{font-size:.8rem;letter-spacing:.2em}
+      .nav{gap:10px 19px}
+      .nav a{font-size:1rem}
+      .container{width:calc(100% - 24px)}
+      .hero{margin:20px auto 42px;padding:34px 22px}
+      .hero h1{margin:28px auto 25px}
+      .studio-grid{grid-template-columns:1fr;gap:16px;margin-bottom:42px}
+      .card{min-height:0;padding:27px 22px}
+      .photo-card{padding:0}
+      .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain}
+      .photo-caption{padding:22px 20px 25px}
+      .button{width:100%}
     }
   </style>
 </head>
 
 <body>
-
-  <header class="header">
-    <div class="header-inner">
-      <img
-        class="logo"
-        src="logo-yognmoov.png"
-        alt="Logo Yog'n Moov"
-      >
-
-      <div class="brand">
-        <h1>Yog'n Moov</h1>
-        <p>Pole Dance</p>
+  <header class="site-header">
+    <div class="brand">
+      <img class="logo" src="logo-yognmoov.png" alt="Logo Yog'n Moov">
+      <div>
+        <p class="brand-title">Yog'n Moov</p>
+        <p class="brand-subtitle">POLE DANCE</p>
       </div>
     </div>
 
-    <nav aria-label="Navigation principale">
+    <nav class="nav" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="pole.html">La pole</a>
       <a href="cours.html">Cours</a>
@@ -541,294 +116,136 @@
       <a href="tarifs.html">Tarifs</a>
       <a href="avis.html">Avis</a>
       <a href="julie.html">Julie</a>
-      <a href="studio.html" class="active">Studio</a>
+      <a href="studio.html" aria-current="page">Studio</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-
+  <main class="container">
     <section class="hero">
       <p class="eyebrow">Bienvenue chez Yog'n Moov</p>
-      <h2>Un studio à taille humaine, pour bouger et se sentir bien</h2>
-      <p>
-        À Soulières, près d'Épernay, Yog'n Moov est un espace intimiste
-        où la pole dance, le yoga et le Pilates se rencontrent dans une
-        ambiance conviviale, bienveillante et sans jugement.
-      </p>
+      <h1>Un studio à taille humaine, pour bouger et se sentir bien</h1>
+      <p>À Soulières, près d'Épernay, Yog'n Moov est un espace intimiste où la pole dance, le yoga et le Pilates se rencontrent dans une ambiance conviviale, bienveillante et sans jugement.</p>
+      <p>On vient pour bouger, apprendre, progresser et surtout passer un bon moment, sans compétition ni comparaison.</p>
     </section>
 
-    <section class="section">
-      <div class="intro-grid">
-        <div>
-          <span class="label">L'esprit du studio</span>
-          <h2>Un endroit où chacun peut trouver sa place</h2>
-          <p>
-            Ici, pas de compétition, pas de comparaison et pas besoin
-            de correspondre à une image particulière. On vient pour
-            bouger, apprendre, progresser et surtout passer un bon moment.
-          </p>
-          <p>
-            Le studio privilégie les petits groupes pour permettre un
-            accompagnement personnalisé, prendre le temps d'expliquer
-            les mouvements et respecter le rythme de chacun.
-          </p>
-          <p>
-            Que l'objectif soit de gagner en force, d'améliorer sa
-            souplesse, de se détendre ou simplement d'essayer quelque
-            chose de nouveau, chacun avance à sa manière.
-          </p>
-        </div>
-
-        <img
-          class="photo"
-          src="studio-photo-1.jpg"
-          alt="Accompagnement pendant une séance de pole dance"
-          loading="lazy"
-        >
+    <section aria-labelledby="studio-title">
+      <div class="section-intro">
+        <p class="eyebrow">Découvrez le studio</p>
+        <h2 id="studio-title">Un endroit où chacun peut trouver sa place</h2>
+        <p>Un studio à taille humaine, avec un accompagnement personnalisé et des cours adaptés aux envies et aux possibilités de chacun.</p>
       </div>
-    </section>
 
-    <section class="dark-section">
-      <div class="section">
-        <div class="studio-grid">
-          <div>
-            <span class="label">Un studio intimiste</span>
-            <h2>De la place pour apprendre, essayer et progresser</h2>
-            <p>
-              Le studio dispose de deux barres de pole dance et accueille
-              volontairement un nombre limité de personnes. Les séances
-              se déroulent dans une atmosphère chaleureuse, loin de
-              l'ambiance impersonnelle des grandes structures.
-            </p>
-            <p>
-              Les mouvements sont adaptés au niveau et aux possibilités
-              de chacun. Il n'est pas nécessaire d'être déjà sportif,
-              souple ou musclé pour commencer.
-            </p>
-            <p>
-              La confiance se construit progressivement, avec de la
-              pratique, des encouragements et le plaisir de découvrir
-              ce dont son corps est capable.
-            </p>
+      <div class="studio-grid">
+        <article class="card photo-card">
+          <img src="studio-photo-1.jpg" alt="Accompagnement pendant une séance de pole dance" loading="lazy">
+          <div class="photo-caption">
+            <h3>Un accompagnement personnalisé</h3>
+            <p>Les petits groupes permettent de prendre le temps d'expliquer les mouvements, de progresser à son rythme et de profiter d'une ambiance chaleureuse.</p>
           </div>
+        </article>
 
-          <img
-            class="photo photo-tall"
-            src="studio-photo-3.jpg"
-            alt="Le studio Yog'n Moov avec ses deux barres de pole dance"
-            loading="lazy"
-          >
-        </div>
+        <article class="card photo-card dark">
+          <img src="studio-photo-3.jpg" alt="Vue du studio Yog'n Moov avec ses deux barres de pole dance" loading="lazy">
+          <div class="photo-caption">
+            <h3>Un studio intimiste</h3>
+            <p>Deux barres de pole dance et un nombre limité de participants pour apprendre, essayer et évoluer dans un cadre convivial.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="values">
-      <div class="values-inner">
-        <h2>Ce qui fait l'esprit Yog'n Moov</h2>
-        <p class="values-intro">
-          Un cadre simple et chaleureux où le mouvement rime avec plaisir,
-          confiance et bien-être.
-        </p>
+    <section class="studio-perks">
+      <p class="eyebrow">L'esprit Yog'n Moov</p>
+      <h2>La bienveillance avant la performance</h2>
+      <p>Pas de compétition, pas de comparaison et pas besoin de correspondre à une image particulière. Chacun avance à son rythme, quel que soit son âge adulte, son genre ou son expérience sportive.</p>
+      <div class="disciplines" aria-label="Les valeurs du studio">
+        <span>Petits groupes</span>
+        <span>Sans jugement</span>
+        <span>Progression à son rythme</span>
+        <span>Convivialité</span>
+      </div>
+      <p>Il n'est pas nécessaire d'être déjà sportif, souple ou musclé pour commencer. L'essentiel est d'avoir envie d'essayer et de se faire plaisir.</p>
+    </section>
 
-        <div class="cards">
-          <article class="card">
-            <h3>La bienveillance</h3>
-            <p>
-              Chacun avance à son rythme, sans pression ni jugement.
-              Les erreurs font partie de l'apprentissage et les progrès,
-              même petits, comptent.
-            </p>
-          </article>
+    <section>
+      <div class="section-intro">
+        <p class="eyebrow">Prendre confiance</p>
+        <h2>Oser, découvrir et dépasser ses limites</h2>
+        <p>La pole dance associe force, coordination, équilibre et expression corporelle. Chaque figure s'apprend progressivement : chaque étape compte.</p>
+      </div>
 
-          <article class="card">
-            <h3>Les petits groupes</h3>
-            <p>
-              Un effectif réduit pour bénéficier de conseils, être
-              accompagné et profiter d'une ambiance conviviale.
-            </p>
-          </article>
+      <div class="studio-grid">
+        <article class="card photo-card">
+          <img src="studio-photo-2.jpg" alt="Accompagnement pendant une figure de pole dance" loading="lazy">
+          <div class="photo-caption">
+            <h3>Apprendre en confiance</h3>
+            <p>Les mouvements sont adaptés aux possibilités de chacun. On prend le temps d'essayer, de recommencer et de savourer ses progrès.</p>
+          </div>
+        </article>
 
-          <article class="card">
+        <article class="card pink">
+          <div>
             <h3>Le plaisir avant tout</h3>
-            <p>
-              On travaille, on découvre, on progresse… et on a aussi
-              le droit de rire ! Le sport n'a pas besoin d'être sérieux
-              tout le temps pour être bénéfique.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="intro-grid">
-        <div>
-          <span class="label">Prendre confiance</span>
-          <h2>Oser, découvrir et dépasser ses limites à son rythme</h2>
-          <p>
-            La pole dance est une discipline complète qui associe
-            force, coordination, équilibre et expression corporelle.
-            Elle permet de découvrir de nouvelles capacités et de
-            prendre confiance en soi au fil des séances.
-          </p>
-          <p>
-            Les figures sont abordées progressivement et adaptées aux
-            possibilités de chacun. Il n'y a aucune obligation de réussir
-            tout de suite : chaque étape compte.
-          </p>
-          <p>
-            Le studio accueille toute personne motivée par l'envie
-            d'essayer, quel que soit son genre ou son expérience sportive.
-          </p>
-        </div>
-
-        <img
-          class="photo photo-tall"
-          src="studio-photo-2.jpg"
-          alt="Accompagnement pendant une figure de pole dance"
-          loading="lazy"
-        >
-      </div>
-    </section>
-
-    <section class="activities">
-      <div class="activities-inner">
-        <h2>Plusieurs façons de bouger et de prendre soin de soi</h2>
-        <p class="activities-intro">
-          Yog'n Moov propose différentes pratiques complémentaires.
-          L'idée est de trouver celle qui correspond à ses envies,
-          à son énergie et à ses besoins du moment.
-        </p>
-
-        <div class="activity-list">
-          <article class="activity">
-            <h3>Pole dance</h3>
-            <p>
-              Force, coordination, équilibre, figures et enchaînements
-              sur la barre. Une pratique progressive pour explorer
-              ses capacités et gagner en confiance.
-            </p>
-          </article>
-
-          <article class="activity">
-            <h3>Yoga</h3>
-            <p>
-              Mobilité, respiration, équilibre et détente. Différentes
-              approches permettent de bouger en douceur ou de travailler
-              plus dynamiquement.
-            </p>
-          </article>
-
-          <article class="activity">
-            <h3>Pilates</h3>
-            <p>
-              Un travail contrôlé pour développer la stabilité,
-              renforcer les muscles profonds et améliorer la conscience
-              du corps et de la posture.
-            </p>
-          </article>
-
-          <article class="activity">
-            <h3>Souplesse et mobilité</h3>
-            <p>
-              Des exercices progressifs pour gagner en amplitude,
-              améliorer le confort dans les mouvements et compléter
-              les autres pratiques.
-            </p>
-          </article>
-
-          <article class="activity">
-            <h3>HIIT et mouvement dynamique</h3>
-            <p>
-              Des séances plus rythmées pour mobiliser le corps,
-              développer l'endurance et varier les façons de bouger.
-            </p>
-          </article>
-
-          <article class="activity">
-            <h3>Méditation et relaxation</h3>
-            <p>
-              Des moments pour ralentir, respirer, relâcher les tensions
-              et retrouver un peu de calme dans le quotidien.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="yoga-grid">
-        <div>
-          <span class="label">L'équilibre aussi</span>
-          <h2>Le mouvement, mais aussi le calme</h2>
-          <p>
-            Yog'n Moov ne se résume pas à la performance physique.
-            Le yoga, la respiration et la méditation ont aussi leur
-            place pour apprendre à ralentir et à être davantage à
-            l'écoute de ses sensations.
-          </p>
-          <p>
-            Selon les séances, on peut chercher à mobiliser le corps,
-            à améliorer sa souplesse, à retrouver de l'énergie ou
-            simplement à s'accorder une pause.
-          </p>
-          <p>
-            L'essentiel reste de trouver un équilibre qui fait du bien,
-            sans pression et sans chercher à se comparer aux autres.
-          </p>
-        </div>
-
-        <img
-          class="photo"
-          src="yoga-photo-1.jpg"
-          alt="Exercice de souplesse en extérieur"
-          loading="lazy"
-        >
-      </div>
-    </section>
-
-    <section class="dark-section">
-      <div class="section">
-        <div class="yoga-grid">
-          <div>
-            <span class="label">Une pause pour soi</span>
-            <h2>Respirer, se recentrer et se détendre</h2>
-            <p>
-              Dans un quotidien souvent chargé, prendre un moment pour
-              soi peut faire toute la différence. Les pratiques douces
-              invitent à porter attention à sa respiration, à ses
-              sensations et à son rythme.
-            </p>
-            <p>
-              Pas besoin de savoir méditer ou d'être particulièrement
-              souple : on vient comme on est, et on adapte la pratique
-              à ses possibilités.
-            </p>
+            <p>On travaille, on découvre, on progresse… et on a aussi le droit de rire ! Le sport n'a pas besoin d'être sérieux tout le temps pour être bénéfique.</p>
+            <p>Le studio privilégie l'encouragement et l'entraide, sans pression de résultat ni comparaison physique.</p>
           </div>
-
-          <img
-            class="photo"
-            src="yoga-photo-2.jpg"
-            alt="Moment de méditation face à la mer"
-            loading="lazy"
-          >
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="cta">
+    <section class="other">
+      <p class="eyebrow">Plusieurs façons de bouger</p>
+      <h2>Des disciplines complémentaires</h2>
+      <p>Yog'n Moov propose plusieurs pratiques pour bouger, renforcer le corps, améliorer sa mobilité ou simplement s'accorder un moment pour soi.</p>
+      <ul class="service-list">
+        <li>Pole dance</li>
+        <li>Yoga</li>
+        <li>Pilates</li>
+        <li>Souplesse</li>
+        <li>Mobilité</li>
+        <li>HIIT</li>
+        <li>Méditation</li>
+        <li>Relaxation</li>
+      </ul>
+    </section>
+
+    <section class="studio-grid">
+      <article class="card photo-card">
+        <img src="yoga-photo-1.jpg" alt="Exercice de souplesse en extérieur" loading="lazy">
+        <div class="photo-caption">
+          <h3>Le mouvement et la souplesse</h3>
+          <p>Les exercices de mobilité et de souplesse permettent de travailler progressivement l'amplitude des mouvements et de compléter les autres pratiques.</p>
+        </div>
+      </article>
+
+      <article class="card photo-card dark">
+        <img src="yoga-photo-2.jpg" alt="Moment de méditation face à la mer" loading="lazy">
+        <div class="photo-caption">
+          <h3>Respirer et se recentrer</h3>
+          <p>Le yoga, la respiration et la méditation invitent à ralentir, à écouter ses sensations et à retrouver un peu de calme dans le quotidien.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact">
+      <p class="eyebrow">Planning et réservations</p>
       <h2>Envie de découvrir le studio ?</h2>
-      <p>
-        Yog'n Moov vous accueille à Soulières, près d'Épernay, dans
-        un cadre intimiste et convivial. Pour connaître les créneaux
-        disponibles ou poser une question, contactez directement le studio.
-      </p>
+      <p class="availability">Le studio se situe à Soulières (51130), à environ 15 minutes d'Épernay.</p>
+      <p>Les places sont limitées pour conserver des cours à taille humaine. Contactez-moi pour connaître les prochaines disponibilités, poser vos questions ou parler de votre projet.</p>
+      <div class="buttons">
+        <a class="button email" href="mailto:poledancejulie@gmail.com?subject=Renseignements%20Yog%27n%20Moov">✉ Écrire un e-mail</a>
+        <a class="button sms" href="sms:+33632514950?body=Bonjour%2C%20je%20souhaite%20avoir%20des%20renseignements%20sur%20le%20studio%20Yog%27n%20Moov.%20Merci%20!">✉ Envoyer un SMS</a>
+      </div>
+    </section>
+  </main>
 
-      <div class="cta-buttons">
-        <a class="button button-gold" href="https://wa.me/33632514950">
-          Contacter par WhatsApp
-        </a>
-
-        <a class="button button-light" href="tel:+33632514950">
-       
+  <footer>
+    <p><strong>Yog'n Moov · Pole Dance</strong></p>
+    <p>Soulières (51130), à environ 15 minutes d'Épernay</p>
+    <p>06 32 51 49 50 · <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">www.yognmoov.fr</a></p>
+    <p><a href="https://www.facebook.com/share/17JPoeD2sn/">Facebook</a> · <a href="https://instagram.com/yognmoov_julie">Instagram</a> · <a href="https://www.tiktok.com/@yogn.moov">TikTok</a></p>
+    <p>La pratique sportive et de bien-être ne remplace pas l'avis d'un médecin.</p>
+  </footer>
+</body>
+</html>
