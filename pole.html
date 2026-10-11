@@ -14,7 +14,6 @@
 :root {
   --black:#191716;
   --gold:#c7a35d;
-  --gold-light:#e2bd71;
   --cream:#f8f0e4;
   --white:#fffdfa;
   --berry:#80334f;
@@ -25,7 +24,6 @@
 }
 
 * { box-sizing:border-box; }
-
 html { scroll-behavior:smooth; }
 
 body {
@@ -37,7 +35,6 @@ body {
 }
 
 img { max-width:100%; }
-
 a { color:inherit; }
 
 .site-header {
@@ -72,6 +69,7 @@ a { color:inherit; }
   font-size:clamp(2rem,5vw,3.25rem);
   font-style:italic;
   line-height:1.15;
+  white-space:nowrap;
 }
 
 .brand-subtitle {
@@ -98,7 +96,7 @@ a { color:inherit; }
 
 .nav a:hover,
 .nav a[aria-current="page"] {
-  color:#a64a6b;
+  color:#d9a6af;
   border-bottom-color:var(--berry);
 }
 
@@ -107,31 +105,15 @@ a { color:inherit; }
   margin:0 auto;
 }
 
-section { padding:45px 0; }
-
-h1,h2,h3 {
-  font-family:Georgia,"Times New Roman",serif;
-  font-weight:400;
-  line-height:1.25;
+.hero {
+  margin:42px auto 58px;
+  background:var(--black);
+  color:var(--cream);
+  border-radius:7px;
+  padding:clamp(30px,6vw,70px) clamp(22px,6vw,68px);
+  text-align:center;
+  border-bottom:5px solid var(--gold);
 }
-
-h1 {
-  font-size:clamp(2.45rem,6vw,4rem);
-  margin:25px 0;
-}
-
-h2 {
-  color:var(--berry);
-  font-size:clamp(2rem,4.5vw,3rem);
-  margin:12px 0 20px;
-}
-
-h3 {
-  font-size:1.7rem;
-  margin-top:5px;
-}
-
-p { margin:12px 0; }
 
 .eyebrow {
   margin:0;
@@ -142,47 +124,56 @@ p { margin:12px 0; }
   text-transform:uppercase;
 }
 
-.hero {
-  margin:42px auto 58px;
-  background:var(--black);
-  color:var(--cream);
-  border-radius:7px;
-  padding:clamp(30px,6vw,70px) clamp(22px,6vw,68px);
-  text-align:left;
-  border-bottom:5px solid var(--gold);
+h1,h2,h3 {
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
 }
 
-.hero h1 {
+h1 {
+  margin:35px auto 30px;
   max-width:850px;
   color:var(--cream);
+  font-size:clamp(2.2rem,6vw,4rem);
+  line-height:1.2;
+  text-align:center;
+}
+
+h2 {
+  margin:12px 0;
+  color:var(--berry);
+  font-size:clamp(2rem,4.5vw,3rem);
+  line-height:1.2;
+}
+
+h3 {
+  margin-top:5px;
+  font-size:1.6rem;
+  line-height:1.25;
 }
 
 .hero p:not(.eyebrow) {
-  max-width:850px;
-  margin:14px 0 0;
-  font-size:clamp(1.05rem,2.6vw,1.2rem);
+  max-width:760px;
+  margin:14px auto 0;
+  font-size:clamp(1.05rem,2.6vw,1.35rem);
+  text-align:center;
   color:#e7dfd6;
 }
 
-.lead {
-  font-size:1.2rem;
-  color:#e7dfd6;
+.hero .eyebrow { color:var(--gold); }
+
+.hero .btn {
+  margin-top:25px;
 }
 
 .hero-image {
   display:block;
   width:100%;
-  height:500px;
-  object-fit:cover;
-  object-position:center;
+  max-width:760px;
+  max-height:520px;
+  height:auto;
+  object-fit:contain;
+  margin:32px auto 0;
   border:1px solid var(--gold);
-  margin-top:30px;
-}
-
-.hero-note {
-  font-size:12px !important;
-  color:#f0cbd7 !important;
-  margin-top:24px !important;
 }
 
 .btn {
@@ -191,13 +182,13 @@ p { margin:12px 0; }
   color:var(--black);
   text-decoration:none;
   padding:13px 22px;
-  margin:18px 8px 8px 0;
+  margin:8px 8px 8px 0;
   font-size:13px;
   font-weight:bold;
   border:1px solid var(--gold);
 }
 
-.btn:hover { background:var(--gold-light); }
+.btn:hover { background:#e4cc94; }
 
 .btn.alt {
   background:transparent;
@@ -206,24 +197,29 @@ p { margin:12px 0; }
 }
 
 .btn.alt:hover {
-  background:var(--pink);
-  color:var(--black);
+  background:#a64a6b;
+  color:var(--white);
 }
 
 .band {
-  background:#ead6a9;
+  background:var(--gold);
   color:var(--black);
-  text-align:left;
-  padding:28px max(22px,calc((100% - 1080px)/2));
-  border-bottom:1px solid var(--gold);
+  text-align:center;
+  padding:28px 8%;
 }
 
 .band p { margin:5px 0; }
 
+section:not(.hero) {
+  padding:62px 8%;
+}
+
 .intro {
   max-width:900px;
-  margin:0;
+  margin:0 auto;
 }
+
+.center { text-align:center; }
 
 .soft {
   background:var(--white);
@@ -233,23 +229,24 @@ p { margin:12px 0; }
 
 .pink-band {
   background:var(--pink);
-  border-top:2px solid var(--berry);
-  border-bottom:2px solid var(--berry);
+  border-top:4px solid var(--berry);
+  border-bottom:4px solid var(--berry);
+  text-align:center;
 }
 
 .dark-section {
   background:var(--black);
   color:var(--cream);
-  padding-left:max(22px,calc((100% - 1080px)/2));
-  padding-right:max(22px,calc((100% - 1080px)/2));
 }
 
-.dark-section .eyebrow { color:var(--gold-light); }
+.dark-section .eyebrow { color:var(--gold); }
+
+.dark-section h2 { color:var(--cream); }
 
 .chips {
   display:flex;
   flex-wrap:wrap;
-  justify-content:flex-start;
+  justify-content:center;
   gap:10px;
   list-style:none;
   padding:0;
@@ -308,7 +305,7 @@ p { margin:12px 0; }
 
 .two-columns {
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:35px;
   align-items:start;
 }
@@ -320,17 +317,18 @@ p { margin:12px 0; }
   margin-bottom:10px;
 }
 
+/* Encadrés roses : texte foncé pour une lecture facile */
 .notice {
   padding:20px 23px;
   background:var(--pink);
-  border-left:4px solid var(--berry);
+  color:var(--text);
+  border-left:6px solid var(--berry);
   margin-top:24px;
 }
 
-.checklist {
-  list-style:none;
-  padding:0;
-}
+.notice strong { color:var(--berry); }
+
+.checklist { list-style:none; padding:0; }
 
 .checklist li {
   position:relative;
@@ -350,29 +348,27 @@ p { margin:12px 0; }
 
 .quote {
   max-width:850px;
-  margin:0;
+  margin:0 auto;
   font-family:Georgia,"Times New Roman",serif;
   font-size:clamp(24px,3vw,36px);
   line-height:1.5;
 }
 
 .cta {
-  text-align:left;
+  text-align:center;
   background:var(--black);
   color:var(--cream);
-  border-top:5px solid var(--gold);
-  padding:clamp(30px,6vw,60px);
+  border-top:4px solid var(--gold);
 }
 
-.cta .eyebrow { color:var(--gold-light); }
-
-.cta h2 { color:var(--gold-light); }
+.cta h2 { color:#e2bd71; }
+.cta .eyebrow { color:var(--gold); }
 
 footer {
   background:var(--black);
   color:#d2cbc0;
-  text-align:left;
-  padding:40px max(22px,calc((100% - 1080px)/2));
+  text-align:center;
+  padding:40px 7%;
   font-size:13px;
   border-top:1px solid #3a342d;
 }
@@ -380,14 +376,14 @@ footer {
 footer a { color:#e2bd71; }
 
 .footer-brand {
-  color:var(--gold-light);
+  color:#e2bd71;
   font-family:Georgia,"Times New Roman",serif;
   font-size:27px;
   font-weight:bold;
 }
 
 .footer-yoga {
-  margin:28px 0 20px;
+  margin:28px auto 20px;
   padding:22px 15px;
   max-width:520px;
   border-top:1px solid var(--gold);
@@ -395,7 +391,7 @@ footer a { color:#e2bd71; }
 }
 
 .footer-yoga h3 {
-  color:var(--gold-light);
+  color:#e2bd71;
   font-size:23px;
   margin:5px 0 10px;
 }
@@ -403,41 +399,39 @@ footer a { color:#e2bd71; }
 .footer-yoga a {
   display:inline-block;
   margin-top:8px;
-  color:var(--gold-light);
+  color:#e2bd71;
   font-weight:bold;
   text-decoration:none;
 }
 
-.footer-yoga a:hover { color:var(--pink); }
+.footer-yoga a:hover { color:#d9a6af; }
 
-@media(max-width:760px) {
-  .site-header {
-    padding:20px 20px 24px;
-  }
+@media(max-width:680px) {
+  .site-header { padding:20px 20px 24px; }
 
   .brand {
     min-height:0;
-    gap:14px;
-    margin-bottom:35px;
+    gap:12px;
+    margin-bottom:30px;
   }
 
   .logo {
-    width:112px;
-    height:112px;
-    flex-basis:112px;
+    width:88px;
+    height:88px;
+    flex:0 0 88px;
   }
 
   .brand-title {
-    font-size:clamp(1.8rem,7vw,2.5rem);
+    font-size:clamp(1.45rem,6vw,2.1rem);
   }
 
   .brand-subtitle {
-    font-size:.8rem;
-    letter-spacing:.2em;
+    margin-top:7px;
+    font-size:.72rem;
+    letter-spacing:.16em;
   }
 
   .nav { gap:10px 19px; }
-
   .nav a { font-size:1rem; }
 
   .container { width:calc(100% - 24px); }
@@ -447,18 +441,20 @@ footer a { color:#e2bd71; }
     padding:34px 22px;
   }
 
-  .hero h1 { margin:28px 0 25px; }
+  h1 {
+    margin:28px auto 25px;
+    font-size:clamp(2rem,8vw,3rem);
+  }
 
-  .hero-image { height:400px; }
-
-  section { padding:35px 0; }
+  section:not(.hero) { padding:45px 7%; }
 
   .benefits,
-  .two-columns {
+  .two-columns,
+  .photo-grid {
     grid-template-columns:1fr;
   }
 
-  .photo-grid { grid-template-columns:1fr; }
+  .benefit { padding:23px; }
 
   .photo-grid img {
     height:auto;
@@ -467,26 +463,22 @@ footer a { color:#e2bd71; }
     background:#e9e3dc;
   }
 
-  .band {
-    padding:25px 20px;
+  .hero-image {
+    max-height:430px;
+    object-fit:contain;
   }
 
-  .dark-section {
-    padding-left:22px;
-    padding-right:22px;
-  }
+  .btn { margin:8px 5px; }
+}
 
-  .cta {
-    padding:34px 22px;
-  }
-
-  footer {
-    padding:35px 22px;
-  }
-
-  .btn {
-    margin-right:5px;
-  }
+@media(max-width:380px) {
+  .site-header { padding-left:14px; padding-right:14px; }
+  .brand { gap:9px; }
+  .logo { width:76px; height:76px; flex-basis:76px; }
+  .brand-title { font-size:1.35rem; }
+  .brand-subtitle { font-size:.64rem; letter-spacing:.12em; }
+  .nav { gap:8px 14px; }
+  .nav a { font-size:.94rem; }
 }
 </style>
 </head>
@@ -522,7 +514,7 @@ footer a { color:#e2bd71; }
 
   <h1>La pole dance : du mouvement, de la technique et de la liberté.</h1>
 
-  <p class="lead">
+  <p>
     À la fois sportive et artistique, la pole dance combine des mouvements
     autour d’une barre verticale, du renforcement musculaire, de l’équilibre
     et de la coordination.
@@ -537,7 +529,7 @@ footer a { color:#e2bd71; }
   <a class="btn" href="cours.html">Découvrir les cours</a>
   <a class="btn alt" href="contact.html">Poser une question</a>
 
-  <p class="hero-note">Yog’n Moov · Soulières, près d’Épernay</p>
+  <p>Yog’n Moov · Soulières, près d’Épernay</p>
 
   <img class="hero-image" src="pole-photo-1.jpg"
        alt="Pratique de la pole dance chez Yog’n Moov">
@@ -601,7 +593,7 @@ footer a { color:#e2bd71; }
 </section>
 
 <section class="soft">
-  <div>
+  <div class="center">
     <p class="eyebrow">La pole en images</p>
     <h2>Une pratique qui se découvre en faisant.</h2>
     <p>
@@ -780,7 +772,7 @@ footer a { color:#e2bd71; }
   <a class="btn" href="tel:+33632514950">Appeler le 06 32 51 49 50</a>
   <a class="btn alt" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
 
-  <p class="hero-note">Yog’n Moov Pole Dance · Soulières (51130), près d’Épernay</p>
+  <p>Yog’n Moov Pole Dance · Soulières (51130), près d’Épernay</p>
 </section>
 
 </main>
