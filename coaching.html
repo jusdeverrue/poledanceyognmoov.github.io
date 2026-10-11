@@ -36,7 +36,7 @@
       line-height: 1.7;
     }
 
-    /* EN-TÊTE : logo et nom côte à côte */
+    /* EN-TÊTE : seule partie modifiée */
 
     .site-header {
       background: var(--noir);
@@ -56,9 +56,9 @@
     }
 
     .brand-logo {
-      flex: 0 0 148px;
-      width: 148px;
-      height: 148px;
+      flex: 0 0 200px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       background: #fff;
       border: 2px solid var(--dore);
@@ -78,10 +78,14 @@
     }
 
     .brand-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       min-width: 0;
     }
 
     .brand-name {
+      display: block;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(2rem, 4vw, 3.2rem);
       font-style: italic;
@@ -91,10 +95,12 @@
     }
 
     .brand-subtitle {
+      display: block;
       color: var(--dore);
       font-size: 1rem;
       letter-spacing: 5px;
       margin-top: 5px;
+      text-align: left;
     }
 
     .main-nav {
@@ -121,7 +127,7 @@
       border-bottom-color: var(--bordeaux);
     }
 
-    /* CONTENU */
+    /* CONTENU : conservé */
 
     main {
       width: 100%;
@@ -341,7 +347,7 @@
       text-decoration: none;
     }
 
-    /* ADAPTATION AUX TÉLÉPHONES */
+    /* ADAPTATION MOBILE : logo ajusté, reste conservé */
 
     @media (max-width: 650px) {
       .site-header {
@@ -349,23 +355,24 @@
       }
 
       .brand {
-        gap: 18px;
+        gap: 24px;
       }
 
       .brand-logo {
-        flex-basis: 112px;
-        width: 112px;
-        height: 112px;
-        padding: 5px;
+        flex: 0 0 200px;
+        width: 200px;
+        height: 200px;
+        padding: 7px;
       }
 
       .brand-name {
-        font-size: clamp(1.6rem, 6vw, 2.3rem);
+        font-size: clamp(2rem, 4vw, 3.2rem);
       }
 
       .brand-subtitle {
-        font-size: 0.75rem;
-        letter-spacing: 3px;
+        font-size: 1rem;
+        letter-spacing: 5px;
+        white-space: nowrap;
       }
 
       .main-nav {
@@ -432,9 +439,9 @@
       }
 
       .brand-logo {
-        flex-basis: 92px;
-        width: 92px;
-        height: 92px;
+        flex-basis: 112px;
+        width: 112px;
+        height: 112px;
       }
 
       .brand-name {
