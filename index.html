@@ -42,7 +42,7 @@
       color: inherit;
     }
 
-    /* EN-TÊTE HARMONISÉ AVEC LES AUTRES PAGES */
+    /* EN-TÊTE */
 
     .site-header {
       background: var(--black);
@@ -107,11 +107,23 @@
       border-bottom-color: var(--berry);
     }
 
-    /* CONTENU */
+    /* ENCADRE GÉNÉRAL CENTRÉ */
+
+    main {
+      width: min(100% - 44px, 1120px);
+      margin: 36px auto;
+      background: var(--black);
+      color: var(--cream);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(25, 23, 22, .08);
+    }
 
     section {
-      padding: 60px 8%;
+      padding: 55px 7%;
     }
+
+    /* PREMIÈRE PARTIE */
 
     .hero {
       background: var(--black);
@@ -120,15 +132,14 @@
       grid-template-columns: 1.1fr .9fr;
       align-items: center;
       gap: 40px;
-      padding-top: 70px;
-      padding-bottom: 70px;
+      padding-top: 65px;
+      padding-bottom: 65px;
     }
 
     .hero img {
       display: block;
       width: 100%;
       height: auto;
-      max-height: none;
       object-fit: contain;
       object-position: center;
       border: 1px solid var(--gold);
@@ -151,11 +162,13 @@
     h1 {
       font-size: clamp(38px, 5vw, 64px);
       margin: 18px 0;
+      color: var(--gold);
     }
 
     h2 {
       font-size: clamp(30px, 4vw, 43px);
       margin-top: 10px;
+      color: var(--gold);
     }
 
     h3 {
@@ -164,7 +177,7 @@
 
     .lead {
       font-size: 17px;
-      color: #d2cbc0;
+      color: #e0d8ce;
     }
 
     .hero-note {
@@ -183,6 +196,7 @@
       font-size: 13px;
       font-weight: bold;
       border: 1px solid var(--gold);
+      border-radius: 3px;
     }
 
     .btn:hover {
@@ -200,6 +214,8 @@
       color: var(--black);
     }
 
+    /* BANDE DORÉE */
+
     .band {
       background: var(--gold);
       color: var(--black);
@@ -215,6 +231,8 @@
       font-weight: bold;
     }
 
+    /* LISTE DES BÉNÉFICES */
+
     .chips {
       display: flex;
       flex-wrap: wrap;
@@ -226,13 +244,16 @@
 
     .chips li {
       border: 1px solid var(--gold);
-      background: var(--white);
+      background: var(--cream);
+      color: var(--text);
       padding: 8px 15px;
       font-size: 13px;
     }
 
+    /* CARTES DES COURS ET COACHINGS */
+
     .doors {
-      background: var(--black);
+      background: #24211f;
       color: var(--cream);
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -243,11 +264,13 @@
       display: block;
       padding: 28px;
       border: 1px solid var(--gold);
+      border-radius: 8px;
       text-decoration: none;
+      color: var(--cream);
     }
 
     .door:hover {
-      background: #292522;
+      background: #302a27;
     }
 
     .door h2 {
@@ -263,17 +286,34 @@
       color: var(--berry);
     }
 
+    .door.alt .kicker {
+      color: var(--berry);
+    }
+
+    /* SECTIONS INTÉRIEURES */
+
     .soft {
-      background: var(--white);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      background: #24211f;
+      border-top: 1px solid #514538;
+      border-bottom: 1px solid #514538;
     }
 
     .pink-band {
       background: var(--pink);
+      color: var(--text);
       border-top: 2px solid #d9a6af;
       border-bottom: 2px solid #d9a6af;
     }
+
+    .pink-band h2 {
+      color: var(--berry);
+    }
+
+    .pink-band .kicker {
+      color: var(--berry);
+    }
+
+    /* PIED DE PAGE */
 
     footer {
       background: var(--black);
@@ -321,9 +361,9 @@
       color: var(--pink);
     }
 
-    /* VERSION MOBILE : MÊMES DIMENSIONS QUE LES AUTRES PAGES */
+    /* ADAPTATION MOBILE */
 
-    @media (max-width: 680px) {
+    @media (max-width: 760px) {
       .site-header {
         padding: 20px 20px 24px;
       }
@@ -357,9 +397,13 @@
       .nav a {
         font-size: 1rem;
       }
-    }
 
-    @media (max-width: 760px) {
+      main {
+        width: calc(100% - 28px);
+        margin: 22px auto;
+        border-radius: 12px;
+      }
+
       .hero,
       .doors {
         grid-template-columns: 1fr;
@@ -370,15 +414,8 @@
         gap: 25px;
       }
 
-      .hero img {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        object-fit: contain;
-      }
-
       section {
-        padding: 45px 7%;
+        padding: 42px 7%;
       }
 
       h1 {
