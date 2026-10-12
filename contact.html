@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Yog’n Moov Pole Dance à Soulières</title>
+  <meta name="description" content="Contactez Yog’n Moov Pole Dance à Soulières, près d’Épernay. Questions, réservations, WhatsApp et réseaux sociaux.">
+
+  <style>
+    :root {
+      --black: #191716;
+      --cream: #f8f0e4;
+      --white: #fffdfa;
+      --berry: #80334f;
+      --gold: #c7a35d;
+      --text: #332d29;
+      --line: #ded2c2;
+      --pink: #f3e1e6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      overflow-wrap: anywhere;
+    }
+
+    .site-header {
+      background: var(--black);
+      color: var(--cream);
+      border-bottom: 4px solid var(--gold);
+      padding: 24px max(22px, calc((100% - 1120px) / 2)) 26px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      min-height: 150px;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      flex: 0 0 150px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid var(--gold);
+    }
+
+    .brand-title {
+      margin: 0;
+      color: #fffaf2;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-style: italic;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      margin: 10px 0 0;
+      color: var(--gold);
+      font-size: .95rem;
+      letter-spacing: .25em;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #f8f0e8;
+      text-decoration: none;
+      font-size: 1.05rem;
+      padding: 5px 0 8px;
+      border-bottom: 4px solid transparent;
+    }
+
+    .nav a:hover,
+    .nav a[aria-current="page"] {
+      color: #d9a6af;
+      border-bottom-color: var(--berry);
+    }
+
+    main {
+      width: min(100% - 44px, 900px);
+      margin: 36px auto;
+      background: var(--black);
+      color: var(--cream);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(25, 23, 22, .08);
+    }
+
+    section {
+      padding: 38px;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.3;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      color: var(--cream);
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--gold);
+      font-size: 1.7rem;
+      margin-top: 0;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--cream);
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .intro .signature {
+      margin-top: 24px;
+      color: #d9a6af;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 1.25rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .contact-card {
+      border: 1px solid #4b4138;
+      border-radius: 12px;
+      padding: 24px;
+      background: #24211f;
+      text-align: center;
+    }
+
+    .contact-card .symbol {
+      display: block;
+      color: var(--gold);
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      margin-bottom: 14px;
+      color: #eee4d7;
+    }
+
+    .contact-card a {
+      color: var(--cream);
+      text-decoration-color: var(--gold);
+      text-underline-offset: 4px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: var(--gold);
+      color: var(--black) !important;
+      text-decoration: none !important;
+      font-weight: bold;
+      transition: transform .2s, opacity .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: .9;
+    }
+
+    .social-section {
+      background: #24211f;
+      text-align: center;
+      border-top: 1px solid #4b4138;
+      border-bottom: 1px solid #4b4138;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      padding: 10px 16px;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .google-card {
+      margin-top: 24px;
+      padding: 22px;
+      border: 1px solid #4b4138;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .google-card p {
+      margin-bottom: 16px;
+    }
+
+    .care-section {
+      background: var(--pink);
+      color: var(--text);
+      text-align: center;
+    }
+
+    .care-section h2 {
+      color: var(--berry);
+    }
+
+    .care-section p {
+      max-width: 620px;
+      margin: 0 auto 18px;
+    }
+
+    .care-section .button {
+      background: var(--berry);
+      color: white !important;
+    }
+
+    .footer {
+      padding: 24px;
+      background: var(--black);
+      color: var(--cream);
+      text-align: center;
+      border-top: 4px solid var(--gold);
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .footer a {
+      color: var(--gold);
+    }
+
+    @media (max-width: 680px) {
+      .site-header {
+        padding: 20px 20px 24px;
+      }
+
+      .brand {
+        min-height: 0;
+        gap: 14px;
+        margin-bottom: 35px;
+      }
+
+      .logo {
+        width: 112px;
+        height: 112px;
+        flex: 0 0 112px;
+      }
+
+      .brand-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+      }
+
+      .brand-subtitle {
+        margin-top: 10px;
+        font-size: .8rem;
+        letter-spacing: .2em;
+      }
+
+      .nav {
+        gap: 10px 19px;
+      }
+
+      .nav a {
+        font-size: 1rem;
+      }
+
+      main {
+        width: calc(100% - 28px);
+        margin: 22px auto;
+        border-radius: 12px;
+      }
+
+      section {
+        padding: 26px 20px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 22px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img class="logo" src="logo-yognmoov.png" alt="Logo Yog'n Moov">
+      <div>
+        <p class="brand-title">Yog'n Moov</p>
+        <p class="brand-subtitle">POLE DANCE</p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="pole.html">La pole</a>
+      <a href="cours.html">Cours</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="avis.html">Avis</a>
+      <a href="julie.html">Julie</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="intro">
+        <h1>Une question ? Parlons-en !</h1>
+        <p>
+          Un premier cours en tête ? Envie de découvrir la pole dance,
+          de connaître les créneaux ou simplement de me poser une question ?
+          Je suis là pour vous renseigner.
+        </p>
+        <p>
+          Chez Yog’n Moov, on prend le temps d’échanger.
+          Pas besoin d’avoir déjà pratiqué : un petit message ne vous engage à rien !
+        </p>
+        <p class="signature">Au plaisir de vous rencontrer,<br>Julie · Yog’n Moov Pole Dance</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <span class="symbol" aria-hidden="true">✉</span>
+          <h3>Un message ?</h3>
+          <p>Pour une question ou une demande d’information.</p>
+          <a class="button" href="mailto:poledancejulie@gmail.com">M’écrire un e-mail</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="symbol" aria-hidden="true">☏</span>
+          <h3>On s’appelle ?</h3>
+          <p>Vous pouvez me joindre directement par téléphone.</p>
+          <a class="button" href="tel:+33632514950">06 32 51 49 50</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="symbol" aria-hidden="true">☏</span>
+          <h3>Le plus simple : WhatsApp</h3>
+          <p>Un petit message pour poser vos questions ou parler d’un cours.</p>
+          <a class="button" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Me contacter sur WhatsApp</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="symbol" aria-hidden="true">⌖</span>
+          <h3>Le studio</h3>
+          <p>Yog’n Moov Pole Dance<br>Soulières (51130)<br>À environ 15 minutes d’Épernay</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="social-section">
+      <h2>Retrouvons-nous aussi ailleurs</h2>
+      <p>
+        Les actualités du studio, les vidéos, les coulisses et les nouveautés :
+        retrouvez Yog’n Moov sur les réseaux.
+      </p>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/17JPoeD2sn/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://instagram.com/yognmoov_julie" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@yogn.moov" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">Site Yoga & Pilates</a>
+      </div>
+
+      <div class="google-card">
+        <h3>Votre expérience chez Yog’n Moov vous a plu ?</h3>
+        <p>Votre avis compte et peut aider d’autres personnes à oser se lancer.</p>
+        <a class="button" href="https://g.page/r/Cd6qyVuqOnD4EBE/review" target="_blank" rel="noopener noreferrer">Laisser un avis sur Google</a>
+      </div>
+    </section>
+
+    <section class="care-section">
+      <h2>Envie de prendre soin de vous autrement ?</h2>
+      <p>
+        En parallèle de la pole dance, je vous accompagne aussi à travers
+        mes soins de bien-être. Une autre facette de mon univers,
+        pour prendre un temps pour vous et vous recentrer.
+      </p>
+      <a class="button" href="https://julieprevost.github.io" target="_blank" rel="noopener noreferrer">
+        Découvrir L’Atelier de la rebouteuse
+      </a>
+
+      <div class="google-card">
+        <h3>Vous avez reçu un soin à L’Atelier de la rebouteuse ?</h3>
+        <p>Vous pouvez également partager votre expérience sur Google.</p>
+        <a class="button" href="https://g.page/r/CQLuSgBFnuxPEBE/review" target="_blank" rel="noopener noreferrer">Laisser un avis sur Google</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Yog’n Moov Pole Dance</strong> · Soulières, près d’Épernay</p>
+    <p>
+      <a href="tel:+33632514950">06 32 51 49 50</a>
+      ·
+      <a href="mailto:poledancejulie@gmail.com">poledancejulie@gmail.com</a>
+    </p>
+    <p>© Yog’n Moov · Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
