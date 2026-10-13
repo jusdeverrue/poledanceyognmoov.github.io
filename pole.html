@@ -1,9 +1,11 @@
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Comprendre la pole dance | Yog’n Moov près d’Épernay</title>
 <meta name="description" content="Découvrez la pole dance : discipline sportive et artistique, bienfaits physiques et mentaux, tenue conseillée et conseils pour votre premier cours chez Yog’n Moov à Soulières près d’Épernay.">
 <meta name="robots" content="index, follow">
@@ -295,6 +297,53 @@ section:not(.hero) { padding:62px 8%; }
   color:var(--muted);
 }
 
+/* Vidéo YouTube Shorts */
+.video-block {
+  margin:45px auto 10px;
+  max-width:760px;
+  padding:30px 20px;
+  text-align:center;
+  background:var(--black);
+  color:var(--cream);
+  border-top:4px solid var(--gold);
+  border-bottom:4px solid var(--gold);
+  border-radius:6px;
+}
+
+.video-block .eyebrow {
+  color:var(--gold);
+}
+
+.video-block h3 {
+  color:var(--cream);
+  margin:12px 0;
+  font-size:clamp(1.6rem,4vw,2.2rem);
+}
+
+.video-block p {
+  max-width:550px;
+  margin:0 auto 24px;
+  color:#e7dfd6;
+}
+
+.short-container {
+  width:100%;
+  max-width:360px;
+  aspect-ratio:9 / 16;
+  margin:0 auto;
+  overflow:hidden;
+  border-radius:14px;
+  background:#000;
+  border:1px solid var(--gold);
+}
+
+.short-container iframe {
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
 .two-columns {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -460,6 +509,15 @@ footer a { color:#e2bd71; }
   }
 
   .btn { margin:8px 5px; }
+
+  .video-block {
+    padding:25px 15px;
+    margin-top:32px;
+  }
+
+  .short-container {
+    max-width:320px;
+  }
 }
 
 @media(max-width:380px) {
@@ -608,6 +666,35 @@ footer a { color:#e2bd71; }
       <img src="pole-photo-4.jpg" alt="Entraînement de pole dance chez Yog’n Moov">
       <figcaption>Progresser figure après figure.</figcaption>
     </figure>
+  </div>
+
+  <!-- Vidéo YouTube Shorts -->
+  <div class="video-block">
+    <p class="eyebrow">En mouvement</p>
+    <h3>Découvrez la pole dance en vidéo</h3>
+    <p>
+      Des figures, des enchaînements et le plaisir de progresser à son rythme
+      chez Yog’n Moov.
+    </p>
+
+    <div class="short-container">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/Ui43TcDIo9o"
+        title="Vidéo de pole dance - Yog’n Moov"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p style="font-size:.9rem;margin-top:20px;">
+      <a href="https://youtube.com/shorts/Ui43TcDIo9o?is=ry-O5Y-fDMGl5NLB"
+         target="_blank" rel="noopener noreferrer"
+         style="color:#e2bd71;font-weight:bold;">
+        Voir aussi la vidéo sur YouTube →
+      </a>
+    </p>
   </div>
 </section>
 
@@ -779,19 +866,4 @@ footer a { color:#e2bd71; }
 
   <div class="footer-yoga">
     <h3>Yog’n Moov · Yoga, Pilates et méditation</h3>
-    <p>Retrouvez également les activités de yoga, Pilates et méditation sur le site dédié.</p>
-    <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">Visiter www.yognmoov.fr →</a>
-  </div>
-
-  <p>
-    <a href="https://www.facebook.com/share/17JPoeD2sn/">Facebook</a> ·
-    <a href="https://instagram.com/yognmoov_julie?rpxt=eHNpNGN0bmpyZjcz">Instagram</a> ·
-    <a href="https://www.tiktok.com/@yogn.moov?_r=1&_t=ZN-9AP1Zvefj8Q">TikTok</a>
-  </p>
-
-  <p><a href="index.html">Accueil</a> · <a href="contact.html">Contact</a></p>
-</footer>
-
-</body>
-</html>
-
+    <p>Retrouvez également les activités de yoga, Pilates et méditation sur le site dédié.</
