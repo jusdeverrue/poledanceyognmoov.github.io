@@ -7,8 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Yog’n Moov | Pole dance près d’Épernay</title>
-  <meta name="description" content="Yog’n Moov, studio de pole dance à Soulières près d’Épernay. Cours en petits groupes, aucun prérequis, coachings et pole sport.">
+  <meta name="description" content="Yog’n Moov, studio de pole dance à Soulières près d’Épernay. Cours en petits groupes, aucun prérequis, coachings et pole sport. Téléchargez gratuitement le guide des débutantes.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yognmoovpoledance.github.io/">
+
+  <!-- Aperçu lors du partage sur Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yog’n Moov Pole Dance près d’Épernay">
+  <meta property="og:description" content="Découvrez la pole dance en petit groupe à Soulières, près d’Épernay, et recevez gratuitement votre guide pour débuter.">
+  <meta property="og:url" content="https://yognmoovpoledance.github.io/">
+  <meta property="og:image" content="https://yognmoovpoledance.github.io/studio-assise.jpg">
+  <meta property="og:image:alt" content="Julie dans le studio de pole dance Yog’n Moov">
 
   <style>
     :root {
@@ -107,7 +116,7 @@
       border-bottom-color: var(--berry);
     }
 
-    /* ENCADRE GÉNÉRAL CENTRÉ */
+    /* CONTENU PRINCIPAL */
 
     main {
       width: min(100% - 44px, 1120px);
@@ -197,10 +206,13 @@
       font-weight: bold;
       border: 1px solid var(--gold);
       border-radius: 3px;
+      text-align: center;
+      transition: background .2s, transform .2s;
     }
 
     .btn:hover {
       background: #e6d3a9;
+      transform: translateY(-1px);
     }
 
     .btn.alt {
@@ -229,6 +241,61 @@
 
     .band a {
       font-weight: bold;
+    }
+
+    /* GUIDE GRATUIT */
+
+    .ebook {
+      background: var(--pink);
+      color: var(--text);
+      text-align: center;
+      padding: 58px 8%;
+      border-top: 3px solid var(--gold);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .ebook .kicker {
+      color: var(--berry);
+    }
+
+    .ebook h2 {
+      color: var(--berry);
+      max-width: 760px;
+      margin: 12px auto 20px;
+    }
+
+    .ebook p {
+      max-width: 700px;
+      margin: 12px auto;
+    }
+
+    .ebook-intro {
+      font-size: 18px;
+    }
+
+    .ebook-highlight {
+      font-weight: bold;
+      color: var(--berry);
+    }
+
+    .ebook .btn {
+      background: var(--berry);
+      color: var(--white);
+      border-color: var(--berry);
+      font-size: 15px;
+      padding: 15px 25px;
+      margin-top: 18px;
+    }
+
+    .ebook .btn:hover {
+      background: #62243b;
+      border-color: #62243b;
+    }
+
+    .ebook-small {
+      font-size: 12px;
+      opacity: .85;
+      margin-top: 15px !important;
     }
 
     /* LISTE DES BÉNÉFICES */
@@ -425,6 +492,16 @@
       .btn {
         max-width: 100%;
       }
+
+      .ebook {
+        padding: 42px 7%;
+      }
+
+      .ebook .btn {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   </style>
 </head>
@@ -489,6 +566,41 @@
     <p><strong>Un studio à taille humaine.</strong></p>
     <p>Petits groupes de 4 à 5 personnes · Convivialité · Bienveillance</p>
   </div>
+
+  <!-- NOUVELLE SECTION : EBOOK GRATUIT -->
+
+  <section class="ebook" id="guide-gratuit">
+    <p class="kicker">Votre cadeau de bienvenue</p>
+
+    <h2>Vous avez envie de commencer la pole dance, mais vous hésitez encore ?</h2>
+
+    <p class="ebook-intro">
+      J’ai préparé un guide gratuit pour vous aider à y voir plus clair
+      et à éviter les erreurs qui peuvent freiner les débutantes.
+    </p>
+
+    <p class="ebook-highlight">
+      Découvrez : « Les 3 erreurs qui bloquent 90 % des débutantes en pole dance »
+    </p>
+
+    <p>
+      Que vous n’ayez jamais pratiqué ou que vous n’osiez pas encore vous lancer,
+      ce guide est un premier pas pour aborder la pole dance plus sereinement.
+    </p>
+
+    <a
+      class="btn"
+      href="https://julieprevost.systeme.io/561b142c"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Télécharger mon guide gratuit
+    </a>
+
+    <p class="ebook-small">
+      Cliquez sur le bouton pour accéder à la page du guide gratuit.
+    </p>
+  </section>
 
   <section>
     <p class="kicker">Bien plus qu’une figure</p>
