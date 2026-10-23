@@ -63,6 +63,53 @@
     .service-list{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:22px auto}
     .service-list li{background:var(--white);border:1px solid rgba(51,45,41,.18);padding:9px 15px;font-weight:700}
 
+    /* Encadré animé de réservation de l'initiation */
+    .initiation-box{
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      margin:0 0 36px;
+      padding:34px 7%;
+      text-align:center;
+      color:var(--cream);
+      background:linear-gradient(135deg,#191716 0%,#29221d 55%,#191716 100%);
+      border-top:2px solid var(--gold);
+      border-bottom:2px solid var(--gold);
+      border-radius:7px;
+      animation:initiation-float 4s ease-in-out infinite;
+    }
+    .initiation-box::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      background:linear-gradient(110deg,transparent 20%,rgba(199,163,93,.12) 45%,rgba(255,253,250,.05) 50%,transparent 75%);
+      transform:translateX(-100%);
+      animation:initiation-shine 6s ease-in-out infinite;
+    }
+    .initiation-icon{display:inline-block;margin-bottom:6px;color:var(--gold);font-size:25px;line-height:1}
+    .initiation-label{margin:0 0 8px;color:var(--gold);font-size:11px;font-weight:bold;letter-spacing:3px;text-transform:uppercase}
+    .initiation-box h2{margin:5px 0 12px;color:var(--cream);font-size:clamp(30px,4vw,42px);line-height:1.2}
+    .initiation-box p:not(.initiation-label){max-width:650px;margin:0 auto 18px;color:#e0d8ce;font-size:15px}
+    .initiation-button{
+      display:inline-block;
+      padding:14px 28px;
+      border:2px solid var(--gold);
+      border-radius:3px;
+      background:var(--gold);
+      color:var(--black);
+      text-decoration:none;
+      font-size:14px;
+      font-weight:bold;
+      letter-spacing:.5px;
+      box-shadow:0 0 0 rgba(199,163,93,0);
+      transition:background .2s,color .2s,box-shadow .2s,transform .2s;
+    }
+    .initiation-button:hover{background:transparent;color:var(--gold);box-shadow:0 0 18px rgba(199,163,93,.25);transform:translateY(-2px)}
+    @keyframes initiation-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+    @keyframes initiation-shine{0%,65%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
     .contact{background:var(--black);color:var(--cream);border-top:6px solid var(--berry);padding:clamp(28px,5vw,48px);text-align:center;margin-bottom:42px}
     .contact h2{color:#e2bd71}
     .contact p{max-width:780px;margin:12px auto;font-size:1.08rem}
@@ -94,6 +141,23 @@
       .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain}
       .photo-caption{padding:22px 20px 25px}
       .button{width:100%}
+      .initiation-box{padding:30px 7%;margin-bottom:26px}
+      .initiation-button{width:100%;max-width:320px;padding:14px 16px}
+    }
+
+    @media(max-width:380px){
+      .site-header{padding-left:14px;padding-right:14px}
+      .brand{gap:9px}
+      .logo{width:76px;height:76px;flex-basis:76px}
+      .brand-title{font-size:1.35rem}
+      .brand-subtitle{font-size:.64rem;letter-spacing:.12em}
+      .nav{gap:8px 14px}
+      .nav a{font-size:.94rem}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      .initiation-box,.initiation-box::before{animation:none}
+      .initiation-button{transition:none}
     }
   </style>
 </head>
@@ -115,7 +179,7 @@
       <a href="coaching.html">Coaching</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="avis.html">Avis</a>
-      <a href="julie.html">Julie</a>
+      <a href="julie.html">Qui suis-je ?</a>
       <a href="studio.html" aria-current="page">Studio</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -127,6 +191,18 @@
       <h1>Un studio à taille humaine, pour bouger et se sentir bien</h1>
       <p>À Soulières, près d'Épernay, Yog'n Moov est un espace intimiste où la pole dance, le yoga et le Pilates se rencontrent dans une ambiance conviviale, bienveillante et sans jugement.</p>
       <p>On vient pour bouger, apprendre, progresser et surtout passer un bon moment, sans compétition ni comparaison.</p>
+    </section>
+
+    <!-- Encadré de réservation de l'initiation -->
+    <section class="initiation-box" aria-labelledby="initiation-title">
+      <span class="initiation-icon" aria-hidden="true">✦</span>
+      <p class="initiation-label">Envie de découvrir la pole ?</p>
+      <h2 id="initiation-title">Réserve ton initiation !</h2>
+      <p>Aucun prérequis. Viens essayer dans une ambiance conviviale et bienveillante.</p>
+      <a class="initiation-button"
+         href="sms:+33632514950?body=Bonjour%20Julie%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20%C3%A0%20la%20pole%20dance%20chez%20Yog%27n%20Moov.%20Merci%20%21">
+        Je réserve par SMS
+      </a>
     </section>
 
     <section aria-labelledby="studio-title">
