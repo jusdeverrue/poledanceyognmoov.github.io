@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -404,6 +403,101 @@ section:not(.hero) { padding:62px 8%; }
 .cta h2 { color:#e2bd71; }
 .cta .eyebrow { color:var(--gold); }
 
+/* Encadré animé de réservation de l'initiation */
+.initiation-box {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  margin:0 0 36px;
+  padding:34px 7%;
+  text-align:center;
+  color:var(--cream);
+  background:linear-gradient(135deg,#191716 0%,#29221d 55%,#191716 100%);
+  border-top:2px solid var(--gold);
+  border-bottom:2px solid var(--gold);
+  border-radius:7px;
+  animation:initiation-float 4s ease-in-out infinite;
+}
+
+.initiation-box::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(199,163,93,.12) 45%,
+    rgba(255,253,250,.05) 50%,
+    transparent 75%
+  );
+  transform:translateX(-100%);
+  animation:initiation-shine 6s ease-in-out infinite;
+}
+
+.initiation-icon {
+  display:inline-block;
+  margin-bottom:6px;
+  color:var(--gold);
+  font-size:25px;
+  line-height:1;
+}
+
+.initiation-label {
+  margin:0 0 8px;
+  color:var(--gold);
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.initiation-box h2 {
+  margin:5px 0 12px;
+  color:var(--cream);
+  font-size:clamp(30px,4vw,42px);
+}
+
+.initiation-box p:not(.initiation-label) {
+  max-width:650px;
+  margin:0 auto 18px;
+  color:#e0d8ce;
+  font-size:15px;
+}
+
+.initiation-button {
+  display:inline-block;
+  padding:14px 28px;
+  border:2px solid var(--gold);
+  border-radius:3px;
+  background:var(--gold);
+  color:var(--black);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:.5px;
+  box-shadow:0 0 0 rgba(199,163,93,0);
+  transition:background .2s,color .2s,box-shadow .2s,transform .2s;
+}
+
+.initiation-button:hover {
+  background:transparent;
+  color:var(--gold);
+  box-shadow:0 0 18px rgba(199,163,93,.25);
+  transform:translateY(-2px);
+}
+
+@keyframes initiation-float {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-3px); }
+}
+
+@keyframes initiation-shine {
+  0%,65% { transform:translateX(-100%); }
+  100% { transform:translateX(100%); }
+}
+
 footer {
   background:var(--black);
   color:#d2cbc0;
@@ -518,6 +612,17 @@ footer a { color:#e2bd71; }
   .short-container {
     max-width:320px;
   }
+
+  .initiation-box {
+    padding:30px 7%;
+    margin-bottom:26px;
+  }
+
+  .initiation-button {
+    width:100%;
+    max-width:320px;
+    padding:14px 16px;
+  }
 }
 
 @media(max-width:380px) {
@@ -528,6 +633,17 @@ footer a { color:#e2bd71; }
   .brand-subtitle { font-size:.64rem; letter-spacing:.12em; }
   .nav { gap:8px 14px; }
   .nav a { font-size:.94rem; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .initiation-box,
+  .initiation-box::before {
+    animation:none;
+  }
+
+  .initiation-button {
+    transition:none;
+  }
 }
 </style>
 </head>
@@ -550,7 +666,7 @@ footer a { color:#e2bd71; }
     <a href="coaching.html">Coaching</a>
     <a href="tarifs.html">Tarifs</a>
     <a href="avis.html">Avis</a>
-    <a href="julie.html">Julie</a>
+    <a href="julie.html">Qui suis-je ?</a>
     <a href="studio.html">Studio</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -582,6 +698,26 @@ footer a { color:#e2bd71; }
 
   <img class="hero-image" src="pole-photo-1.jpg"
        alt="Pratique de la pole dance chez Yog’n Moov">
+</section>
+
+<!-- Encadré de réservation de l'initiation -->
+<section class="initiation-box" aria-labelledby="initiation-title">
+  <span class="initiation-icon" aria-hidden="true">✦</span>
+
+  <p class="initiation-label">Envie de découvrir la pole ?</p>
+
+  <h2 id="initiation-title">Réserve ton initiation !</h2>
+
+  <p>
+    Aucun prérequis. Viens essayer dans une ambiance conviviale et bienveillante.
+  </p>
+
+  <a
+    class="initiation-button"
+    href="sms:+33632514950?body=Bonjour%20Julie%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20%C3%A0%20la%20pole%20dance%20chez%20Yog%27n%20Moov.%20Merci%20%21"
+  >
+    Je réserve par SMS
+  </a>
 </section>
 
 <div class="band">
@@ -775,95 +911,4 @@ footer a { color:#e2bd71; }
       </ul>
 
       <div class="notice">
-        <strong>Avant le cours :</strong> évitez les crèmes, huiles et laits
-        corporels sur la peau, car ils peuvent rendre la barre glissante.
-        Retirez les bijoux, bagues, montres et accessoires qui risquent de
-        s’accrocher ou de rayer la barre. Arrivez à l’heure pour participer
-        à l’échauffement complet.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="soft">
-  <div class="intro">
-    <p class="eyebrow">Le déroulement</p>
-    <h2>Une séance pour apprendre en sécurité</h2>
-
-    <p>
-      Un cours commence par un échauffement, suivi d’exercices techniques et
-      de l’apprentissage de mouvements adaptés au contenu de la séance.
-      Un retour au calme ou des étirements peuvent compléter le cours.
-    </p>
-
-    <p>
-      On prend le temps de comprendre les placements et les consignes.
-      Il n’est pas question de réussir une figure à tout prix : chacun progresse
-      à son rythme. En cas de douleur inhabituelle, on arrête le mouvement
-      et on en parle à l’enseignante.
-    </p>
-  </div>
-</section>
-
-<section>
-  <div class="two-columns">
-    <div>
-      <p class="eyebrow">Chez Yog’n Moov</p>
-      <h2>Une pratique à taille humaine</h2>
-
-      <p>
-        Le studio se trouve à Soulières, à environ 15 minutes d’Épernay.
-        Les groupes de 4 à 5 personnes permettent de garder une ambiance
-        conviviale et de bénéficier d’un accompagnement attentif.
-      </p>
-
-      <p>
-        Pas de pression sur l’apparence ni sur les performances : on vient
-        pratiquer, apprendre et passer un bon moment.
-      </p>
-    </div>
-
-    <div>
-      <p class="eyebrow">Envie d’un format différent ?</p>
-      <h2>Choisissez votre façon de pratiquer</h2>
-
-      <p>
-        En plus des cours au studio, différents formats peuvent être proposés
-        selon les disponibilités : séances individuelles, duo, semi-privées,
-        ateliers parent-enfant, stages à domicile ou coaching spécifique.
-      </p>
-
-      <a class="btn" href="cours.html">Voir les cours</a>
-      <a class="btn alt" href="coaching.html">Voir les coachings</a>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <p class="eyebrow">Une question avant de vous lancer ?</p>
-  <h2>Parlons de votre première séance.</h2>
-  <p>
-    Contactez-moi pour connaître les créneaux disponibles ou poser vos questions
-    sur la pratique.
-  </p>
-
-  <a class="btn" href="tel:+33632514950">Appeler le 06 32 51 49 50</a>
-  <a class="btn alt" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
-
-  <p>Yog’n Moov Pole Dance · Soulières (51130), près d’Épernay</p>
-</section>
-
-</main>
-
-<footer>
-  <p class="footer-brand">Yog’n Moov</p>
-  <p>Pole dance · Soulières (51130), près d’Épernay</p>
-
-  <p>
-    <a href="tel:+33632514950">06 32 51 49 50</a> ·
-    <a href="mailto:poledancejulie@gmail.com">Envoyer un e-mail</a>
-  </p>
-
-  <div class="footer-yoga">
-    <h3>Yog’n Moov · Yoga, Pilates et méditation</h3>
-    <p>Retrouvez également les activités de yoga, Pilates et méditation sur le site dédié.</
+        <strong>Avant le cours :</strong> évitez les crèmes, huiles et la
