@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,7 +20,7 @@
     .nav a{color:#f8f0e8;text-decoration:none;font-size:1.05rem;padding:5px 0 8px;border-bottom:4px solid transparent}
     .nav a:hover,.nav a[aria-current=page]{color:#a64a6b;border-bottom-color:var(--berry)}
     .container{width:min(1080px,calc(100% - 40px));margin:0 auto}
-    .hero{margin:42px auto 58px;background:var(--black);color:var(--cream);border-radius:7px;padding:clamp(30px,6vw,70px) clamp(22px,6vw,68px);text-align:center;border-bottom:5px solid var(--gold)}
+    .hero{margin:42px auto 30px;background:var(--black);color:var(--cream);border-radius:7px;padding:clamp(30px,6vw,70px) clamp(22px,6vw,68px);text-align:center;border-bottom:5px solid var(--gold)}
     .eyebrow{margin:0;color:var(--gold);font-size:.86rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
     h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
     h1{margin:35px auto 30px;max-width:760px;color:var(--berry);font-size:clamp(2.45rem,6vw,4rem);line-height:1.2;text-align:center}
@@ -40,6 +39,71 @@
     .price{margin-top:20px;color:var(--berry);font-size:clamp(2.2rem,5vw,2.8rem);font-weight:800;line-height:1.15}
     .card.dark .price{color:#e2bd71}
     .price-note{margin-top:5px;font-size:1rem}
+
+    /* Encart animé de réservation */
+    .initiation-box{
+      position:relative;
+      overflow:hidden;
+      margin:0 auto 48px;
+      padding:clamp(26px,5vw,42px) clamp(20px,5vw,42px);
+      max-width:900px;
+      text-align:center;
+      color:var(--cream);
+      background:var(--black);
+      border:2px solid var(--gold);
+      border-radius:9px;
+      box-shadow:0 8px 24px rgba(25,23,22,.12);
+      animation:initiation-float 3.5s ease-in-out infinite;
+    }
+    .initiation-box::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-70%;
+      width:45%;
+      height:100%;
+      background:linear-gradient(110deg,transparent,rgba(255,255,255,.08),transparent);
+      transform:skewX(-20deg);
+      animation:initiation-shine 6s ease-in-out infinite;
+      pointer-events:none;
+    }
+    .initiation-icon{color:#e2bd71;font-size:1.8rem;line-height:1;margin-bottom:12px}
+    .initiation-label{margin:0;color:#e2bd71;font-size:.82rem;font-weight:700;letter-spacing:.16em}
+    .initiation-box h2{margin:12px 0;color:#fffdfa;font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.2}
+    .initiation-box p:not(.initiation-label){max-width:620px;margin:12px auto 22px;color:#f8f0e4;font-size:1.05rem}
+    .initiation-button{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:54px;
+      padding:13px 27px;
+      border:2px solid var(--gold);
+      border-radius:999px;
+      background:var(--gold);
+      color:var(--black);
+      text-decoration:none;
+      font-weight:800;
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .initiation-button:hover,.initiation-button:focus-visible{
+      transform:translateY(-3px);
+      box-shadow:0 5px 18px rgba(199,163,93,.35);
+    }
+    @keyframes initiation-float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-4px)}
+    }
+    @keyframes initiation-shine{
+      0%,65%{left:-70%}
+      90%,100%{left:130%}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .initiation-box,.initiation-box::before{animation:none}
+      .initiation-button{transition:none}
+    }
+
     .other{background:#ead6a9;border-top:6px solid var(--gold);padding:clamp(26px,5vw,46px);text-align:center;margin-bottom:30px}
     .studio-perks{background:var(--pink);border-top:6px solid var(--berry);padding:clamp(26px,5vw,42px);text-align:center;margin:0 0 30px}
     .studio-perks h2{margin:12px 0;color:var(--berry);font-size:clamp(1.9rem,4.5vw,2.6rem);line-height:1.2}
@@ -71,12 +135,14 @@
       .nav{gap:10px 19px}
       .nav a{font-size:1rem}
       .container{width:calc(100% - 24px)}
-      .hero{margin:20px auto 42px;padding:34px 22px}
+      .hero{margin:20px auto 25px;padding:34px 22px}
       .hero h1{margin:28px auto 25px}
       .prices{grid-template-columns:1fr;gap:16px;margin-bottom:42px}
       .card{min-height:0;padding:27px 22px}
       .card p{max-width:500px}
       .button{width:100%}
+      .initiation-box{margin-bottom:38px}
+      .initiation-button{width:100%;padding:13px 18px}
     }
   </style>
 </head>
@@ -108,6 +174,16 @@
       <h1>Des tarifs pour chaque envie</h1>
       <p>Découvrir, pratiquer régulièrement, venir avec une amie ou travailler un objectif : choisissez la formule qui vous correspond.</p>
       <p>Des cours à taille humaine, dans un cadre bienveillant, pour apprendre, progresser et prendre plaisir à bouger.</p>
+    </section>
+
+    <section class="initiation-box" aria-labelledby="initiation-title">
+      <div class="initiation-icon" aria-hidden="true">✧</div>
+      <p class="initiation-label">ENVIE DE DÉCOUVRIR LA POLE ?</p>
+      <h2 id="initiation-title">Réserve ton initiation !</h2>
+      <p>Aucun prérequis. Viens essayer dans une ambiance conviviale et bienveillante.</p>
+      <a class="initiation-button" href="sms:+33632514950?body=Bonjour%20Julie%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20%C3%A0%20la%20pole%20dance%20chez%20Yog%27n%20Moov.%20Merci%20!" aria-label="Réserver une initiation par SMS">
+        <span aria-hidden="true">☏</span> Je réserve par SMS
+      </a>
     </section>
 
     <section aria-labelledby="tarifs-title">
@@ -213,3 +289,4 @@
   </footer>
 </body>
 </html>
+
