@@ -1,10 +1,13 @@
 
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Découvrez Julie, infirmière depuis plus de 20 ans, professeure de yoga et passionnée de pole dance chez Yog’n Moov à Soulières, près d’Épernay.">
-  <title>Qui suis-je ? Julie | Yog’n Moov Pole Dance</title>  <style>
+  <title>Qui suis-je ? Julie | Yog’n Moov Pole Dance</title>
+
+  <style>
     :root {
       --black:#191716;
       --cream:#f8f0e4;
@@ -251,6 +254,116 @@
       border-color:#a64a6b;
     }
 
+    /* Encart d'initiation */
+
+    .initiation-box {
+      position:relative;
+      overflow:hidden;
+      margin:0 auto 42px;
+      padding:30px 24px;
+      background:var(--black);
+      color:var(--cream);
+      border:1px solid rgba(199,163,93,.65);
+      border-bottom:4px solid var(--gold);
+      border-radius:7px;
+      text-align:center;
+      box-shadow:0 10px 24px rgba(25,23,22,.12);
+      animation:initiation-float 5s ease-in-out infinite;
+    }
+
+    .initiation-box::before {
+      content:"";
+      position:absolute;
+      top:0;
+      left:-80%;
+      width:55%;
+      height:100%;
+      background:linear-gradient(
+        110deg,
+        transparent,
+        rgba(255,255,255,.09),
+        transparent
+      );
+      transform:skewX(-18deg);
+      animation:initiation-shine 7s ease-in-out infinite;
+      pointer-events:none;
+    }
+
+    .initiation-icon {
+      display:block;
+      color:var(--gold);
+      font-size:1.5rem;
+      margin-bottom:5px;
+    }
+
+    .initiation-label {
+      margin:0 0 6px !important;
+      color:var(--gold);
+      font-size:.82rem !important;
+      font-weight:700;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    .initiation-box h2 {
+      position:relative;
+      margin:8px 0 12px;
+      color:#e2bd71;
+      font-size:clamp(1.8rem,4vw,2.5rem);
+      line-height:1.2;
+    }
+
+    .initiation-box > p:not(.initiation-label) {
+      position:relative;
+      max-width:650px;
+      margin:0 auto 22px;
+      color:#e7dfd6;
+      font-size:1.02rem;
+    }
+
+    .initiation-button {
+      position:relative;
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-height:50px;
+      padding:12px 24px;
+      border-radius:999px;
+      background:var(--gold);
+      color:var(--black);
+      border:2px solid var(--gold);
+      text-decoration:none;
+      font-weight:800;
+      transition:transform .15s ease,background .15s ease;
+    }
+
+    .initiation-button:hover {
+      transform:translateY(-2px);
+      background:#d7b875;
+    }
+
+    @keyframes initiation-float {
+      0%,100% { transform:translateY(0); }
+      50% { transform:translateY(-3px); }
+    }
+
+    @keyframes initiation-shine {
+      0%,70%,100% { left:-80%; }
+      85% { left:130%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .initiation-box,
+      .initiation-box::before {
+        animation:none;
+      }
+
+      .initiation-button,
+      .button {
+        transition:none;
+      }
+    }
+
     footer {
       background:var(--black);
       color:var(--cream);
@@ -308,15 +421,25 @@
       .buttons { gap:12px; }
 
       .button { width:100%; }
+
+      .initiation-box { padding:28px 18px; }
+
+      .initiation-button { width:100%; }
     }
-  </style></head><body><header class="site-header">
+  </style>
+</head>
+
+<body>
+<header class="site-header">
   <div class="brand">
     <img class="logo" src="logo-yognmoov.png" alt="Logo Yog'n Moov">
     <div>
       <p class="brand-title">Yog'n Moov</p>
       <p class="brand-subtitle">POLE DANCE</p>
     </div>
-  </div>  <nav class="nav" aria-label="Navigation principale">
+  </div>
+
+  <nav class="nav" aria-label="Navigation principale">
     <a href="index.html">Accueil</a>
     <a href="pole.html">La pole</a>
     <a href="cours.html">Cours</a>
@@ -327,140 +450,168 @@
     <a href="studio.html">Studio</a>
     <a href="contact.html">Contact</a>
   </nav>
-</header><main class="container">  <section class="hero">
+</header>
+
+<main class="container">
+
+  <section class="hero">
     <p class="eyebrow">Derrière Yog'n Moov, Julie</p>
     <h1>Mon histoire, entre soin, yoga et pole dance</h1>
     <p>Infirmière depuis plus de 20 ans, professeure de yoga… et passionnée de pole dance grâce à une belle aventure avec ma fille.</p>
-  </section>  <section class="story"><h2>Tout a commencé avec ma fille…</h2>
+  </section>
 
-<p>
-  Je suis infirmière depuis plus de 20 ans et j’exerce toujours ce métier
-  qui fait partie de ma vie. En parallèle, je suis devenue professeure
-  de yoga, avec l’envie de partager le mouvement, le bien-être et le
-  plaisir de prendre soin de soi.
-</p>
+  <section class="story">
+    <h2>Tout a commencé avec ma fille…</h2>
 
-<p>
-  Et puis, il y a eu la pole dance. Lorsque ma fille avait environ 9 ans,
-  elle m’a annoncé qu’elle avait trouvé le sport qu’elle voulait pratiquer :
-  la pole dance.
-</p>
+    <p>
+      Je suis infirmière depuis plus de 20 ans et j’exerce toujours ce métier
+      qui fait partie de ma vie. En parallèle, je suis devenue professeure
+      de yoga, avec l’envie de partager le mouvement, le bien-être et le
+      plaisir de prendre soin de soi.
+    </p>
 
-<p>
-  Au départ, j’étais un peu sceptique. Comme beaucoup, j’avais cette image
-  de la pole dance associée à quelque chose de très sexualisé. Mais j’ai
-  décidé de dépasser mes préjugés et de tester un cours en duo avec elle.
-</p>
+    <p>
+      Et puis, il y a eu la pole dance. Lorsque ma fille avait environ 9 ans,
+      elle m’a annoncé qu’elle avait trouvé le sport qu’elle voulait pratiquer :
+      la pole dance.
+    </p>
 
-<p>
-  Résultat ? <strong>On s’est éclatées toutes les deux !</strong>
-</p>
+    <p>
+      Au départ, j’étais un peu sceptique. Comme beaucoup, j’avais cette image
+      de la pole dance associée à quelque chose de très sexualisé. Mais j’ai
+      décidé de dépasser mes préjugés et de tester un cours en duo avec elle.
+    </p>
 
-<p>
-  De fil en aiguille, la passion a grandi. À Noël, nous avons acheté
-  notre première barre de pole dance… et cette petite aventure familiale
-  a pris une toute autre dimension.
-</p>
+    <p>
+      Résultat ? <strong>On s’est éclatées toutes les deux !</strong>
+    </p>
 
-<figure class="photo-card">
-  <img
-    src="julie-pole.jpg"
-    alt="Julie réalise une figure de pole dance dans son studio"
-    loading="lazy"
-  >
-  <figcaption class="photo-caption">
-    Pas besoin d’avoir commencé jeune pour découvrir tout ce que la pole dance peut nous apporter.
-  </figcaption>
-</figure>
+    <p>
+      De fil en aiguille, la passion a grandi. À Noël, nous avons acheté
+      notre première barre de pole dance… et cette petite aventure familiale
+      a pris une toute autre dimension.
+    </p>
 
-<p>
-  Aujourd’hui, cette découverte est devenue Yog’n Moov Pole Dance,
-  mon studio à Soulières, près d’Épernay. Une aventure née d’un moment
-  partagé avec ma fille et devenue une passion que j’ai envie de transmettre.
-</p>
+    <figure class="photo-card">
+      <img
+        src="julie-pole.jpg"
+        alt="Julie réalise une figure de pole dance dans son studio"
+        loading="lazy"
+      >
+      <figcaption class="photo-caption">
+        Pas besoin d’avoir commencé jeune pour découvrir tout ce que la pole dance peut nous apporter.
+      </figcaption>
+    </figure>
 
-<h2>Une pole dance accessible, sans pression et sans jugement</h2>
+    <p>
+      Aujourd’hui, cette découverte est devenue Yog’n Moov Pole Dance,
+      mon studio à Soulières, près d’Épernay. Une aventure née d’un moment
+      partagé avec ma fille et devenue une passion que j’ai envie de transmettre.
+    </p>
 
-<p>
-  Je sais ce que c’est de débuter, de douter et de se demander si l’on
-  va y arriver. C’est pourquoi je tiens à proposer des cours en petits
-  groupes, dans une ambiance conviviale où chacun peut évoluer à son rythme.
-</p>
+    <h2>Une pole dance accessible, sans pression et sans jugement</h2>
 
-<p>
-  Ici, pas besoin d’être souple, musclé, sportif ou de savoir danser.
-  Pas besoin d’avoir un corps particulier ni de réaliser des prouesses
-  pour avoir sa place.
-</p>
+    <p>
+      Je sais ce que c’est de débuter, de douter et de se demander si l’on
+      va y arriver. C’est pourquoi je tiens à proposer des cours en petits
+      groupes, dans une ambiance conviviale où chacun peut évoluer à son rythme.
+    </p>
 
-<p>
-  On apprend, on tâtonne, on progresse, on s’encourage… et on rigole aussi !
-  Parce qu’on peut travailler sérieusement sans se prendre au sérieux.
-</p>
+    <p>
+      Ici, pas besoin d’être souple, musclé, sportif ou de savoir danser.
+      Pas besoin d’avoir un corps particulier ni de réaliser des prouesses
+      pour avoir sa place.
+    </p>
 
-<div class="highlight">
-  Pour moi, la pole dance, c’est bien plus qu’une activité physique :
-  c’est découvrir ce dont on est capable, gagner en force, dépasser
-  ses appréhensions et porter un regard différent sur son corps.
-</div>
+    <p>
+      On apprend, on tâtonne, on progresse, on s’encourage… et on rigole aussi !
+      Parce qu’on peut travailler sérieusement sans se prendre au sérieux.
+    </p>
 
-<h2>Mon envie : vous donner le goût d’oser</h2>
+    <div class="highlight">
+      Pour moi, la pole dance, c’est bien plus qu’une activité physique :
+      c’est découvrir ce dont on est capable, gagner en force, dépasser
+      ses appréhensions et porter un regard différent sur son corps.
+    </div>
 
-<p>
-  Avec Yog’n Moov, j’ai voulu créer un lieu à taille humaine, loin des
-  grands studios impersonnels, où l’on vient apprendre, progresser et
-  partager un bon moment.
-</p>
+    <h2>Mon envie : vous donner le goût d’oser</h2>
 
-<p>
-  Femmes et hommes, débutants ou non : chacun peut trouver sa place,
-  sans compétition ni pression de résultat.
-</p>
+    <p>
+      Avec Yog’n Moov, j’ai voulu créer un lieu à taille humaine, loin des
+      grands studios impersonnels, où l’on vient apprendre, progresser et
+      partager un bon moment.
+    </p>
 
-<p>
-  Je ne vous promets pas de réussir votre première figure dès le premier
-  cours. Je souhaite surtout vous accompagner dans votre progression,
-  vous encourager et vous aider à prendre confiance, étape après étape.
-</p>
+    <p>
+      Femmes et hommes, débutants ou non : chacun peut trouver sa place,
+      sans compétition ni pression de résultat.
+    </p>
 
-<div class="highlight">
-  J’ai découvert la pole dance après 40 ans, grâce à ma fille.
-  Et si vous vous laissiez surprendre, vous aussi ?
-</div>
+    <p>
+      Je ne vous promets pas de réussir votre première figure dès le premier
+      cours. Je souhaite surtout vous accompagner dans votre progression,
+      vous encourager et vous aider à prendre confiance, étape après étape.
+    </p>
 
-  </section>  <section class="contact">
+    <div class="highlight">
+      J’ai découvert la pole dance après 40 ans, grâce à ma fille.
+      Et si vous vous laissiez surprendre, vous aussi ?
+    </div>
+  </section>
+
+  <section class="contact">
     <p class="eyebrow">À votre tour !</p>
-    <h2>Et si vous osiez essayer ?</h2><p>
-  Vous avez toujours eu envie d’essayer, mais vous pensez ne pas être
-  assez souple, assez fort ou assez sportif ?
-</p>
+    <h2>Et si vous osiez essayer ?</h2>
 
-<p>
-  Oubliez les idées reçues. Venez découvrir la pole dance dans une
-  ambiance simple, bienveillante et décomplexée.
-</p>
+    <p>
+      Vous avez toujours eu envie d’essayer, mais vous pensez ne pas être
+      assez souple, assez fort ou assez sportif ?
+    </p>
 
-<p>
-  <strong>
-    Chez Yog’n Moov, on ne vient pas pour être parfait :
-    on vient pour progresser, se dépasser et se faire plaisir !
-  </strong>
-</p>
+    <p>
+      Oubliez les idées reçues. Venez découvrir la pole dance dans une
+      ambiance simple, bienveillante et décomplexée.
+    </p>
 
-<div class="buttons">
-  <a class="button gold" href="cours.html">
-    Découvrir les cours
-  </a>
+    <p>
+      <strong>
+        Chez Yog’n Moov, on ne vient pas pour être parfait :
+        on vient pour progresser, se dépasser et se faire plaisir !
+      </strong>
+    </p>
 
-  <a class="button outline" href="https://wa.me/33632514950">
-    Me contacter sur WhatsApp
-  </a>
-</div>
+    <div class="buttons">
+      <a class="button gold" href="cours.html">
+        Découvrir les cours
+      </a>
 
-  </section></main><footer>
+      <a class="button outline" href="https://wa.me/33632514950">
+        Me contacter sur WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Encart d'initiation ajouté en bas de page -->
+
+  <section class="initiation-box" aria-labelledby="initiation-title">
+    <span class="initiation-icon" aria-hidden="true">✦</span>
+    <p class="initiation-label">Envie de découvrir la pole ?</p>
+    <h2 id="initiation-title">À votre tour d’essayer !</h2>
+    <p>Aucun prérequis. Venez découvrir la pole dance dans une ambiance conviviale et bienveillante.</p>
+    <a class="initiation-button"
+       href="sms:+33632514950?body=Bonjour%20Julie%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20%C3%A0%20la%20pole%20dance%20chez%20Yog%27n%20Moov.%20Merci%20%21">
+      Je réserve mon initiation
+    </a>
+  </section>
+
+</main>
+
+<footer>
   <p><strong>Yog'n Moov · Pole Dance</strong></p>
   <p>Soulières (51130), à environ 15 minutes d'Épernay</p>
   <p>06 32 51 49 50 · <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">www.yognmoov.fr</a></p>
   <p>Pratique sportive et de bien-être, adaptée à chacun. Elle ne remplace pas l'avis d'un médecin.</p>
-</footer></body>
+</footer>
+
+</body>
 </html>
