@@ -11,7 +11,6 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://yognmoovpoledance.github.io/">
 
-  <!-- Aperçu lors du partage sur Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yog’n Moov Pole Dance près d’Épernay">
   <meta property="og:description" content="Découvrez la pole dance en petit groupe à Soulières, près d’Épernay, et recevez gratuitement votre guide pour débuter.">
@@ -31,13 +30,9 @@
       --line: #ded2c2;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -47,11 +42,7 @@
       line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-    }
-
-    /* EN-TÊTE */
+    a { color: inherit; }
 
     .site-header {
       background: var(--black);
@@ -116,8 +107,6 @@
       border-bottom-color: var(--berry);
     }
 
-    /* CONTENU PRINCIPAL */
-
     main {
       width: min(100% - 44px, 1120px);
       margin: 36px auto;
@@ -128,11 +117,7 @@
       box-shadow: 0 5px 18px rgba(25, 23, 22, .08);
     }
 
-    section {
-      padding: 55px 7%;
-    }
-
-    /* PREMIÈRE PARTIE */
+    section { padding: 55px 7%; }
 
     .hero {
       background: var(--black);
@@ -180,9 +165,7 @@
       color: var(--gold);
     }
 
-    h3 {
-      font-size: 25px;
-    }
+    h3 { font-size: 25px; }
 
     .lead {
       font-size: 17px;
@@ -226,8 +209,6 @@
       color: var(--black);
     }
 
-    /* BANDE DORÉE */
-
     .band {
       background: var(--gold);
       color: var(--black);
@@ -235,15 +216,8 @@
       padding: 28px 8%;
     }
 
-    .band p {
-      margin: 5px 0;
-    }
-
-    .band a {
-      font-weight: bold;
-    }
-
-    /* GUIDE GRATUIT */
+    .band p { margin: 5px 0; }
+    .band a { font-weight: bold; }
 
     .ebook {
       background: var(--pink);
@@ -254,9 +228,7 @@
       border-bottom: 3px solid var(--gold);
     }
 
-    .ebook .kicker {
-      color: var(--berry);
-    }
+    .ebook .kicker { color: var(--berry); }
 
     .ebook h2 {
       color: var(--berry);
@@ -269,9 +241,7 @@
       margin: 12px auto;
     }
 
-    .ebook-intro {
-      font-size: 18px;
-    }
+    .ebook-intro { font-size: 18px; }
 
     .ebook-highlight {
       font-weight: bold;
@@ -298,8 +268,6 @@
       margin-top: 15px !important;
     }
 
-    /* LISTE DES BÉNÉFICES */
-
     .chips {
       display: flex;
       flex-wrap: wrap;
@@ -316,8 +284,6 @@
       padding: 8px 15px;
       font-size: 13px;
     }
-
-    /* CARTES DES COURS ET COACHINGS */
 
     .doors {
       background: #24211f;
@@ -336,28 +302,18 @@
       color: var(--cream);
     }
 
-    .door:hover {
-      background: #302a27;
-    }
-
-    .door h2 {
-      color: var(--gold);
-    }
+    .door:hover { background: #302a27; }
+    .door h2 { color: var(--gold); }
 
     .door.alt {
       background: var(--pink);
       color: var(--text);
     }
 
-    .door.alt h2 {
-      color: var(--berry);
-    }
-
+    .door.alt h2,
     .door.alt .kicker {
       color: var(--berry);
     }
-
-    /* SECTIONS INTÉRIEURES */
 
     .soft {
       background: #24211f;
@@ -372,15 +328,10 @@
       border-bottom: 2px solid #d9a6af;
     }
 
-    .pink-band h2 {
-      color: var(--berry);
-    }
-
+    .pink-band h2,
     .pink-band .kicker {
       color: var(--berry);
     }
-
-    /* PIED DE PAGE */
 
     footer {
       background: var(--black);
@@ -391,9 +342,7 @@
       border-top: 3px solid var(--gold);
     }
 
-    footer a {
-      color: var(--pink);
-    }
+    footer a { color: var(--pink); }
 
     .footer-brand {
       color: var(--gold);
@@ -424,16 +373,10 @@
       text-decoration: none;
     }
 
-    .footer-yoga a:hover {
-      color: var(--pink);
-    }
-
-    /* ADAPTATION MOBILE */
+    .footer-yoga a:hover { color: var(--pink); }
 
     @media (max-width: 760px) {
-      .site-header {
-        padding: 20px 20px 24px;
-      }
+      .site-header { padding: 20px 20px 24px; }
 
       .brand {
         min-height: 0;
@@ -457,13 +400,8 @@
         letter-spacing: .2em;
       }
 
-      .nav {
-        gap: 10px 19px;
-      }
-
-      .nav a {
-        font-size: 1rem;
-      }
+      .nav { gap: 10px 19px; }
+      .nav a { font-size: 1rem; }
 
       main {
         width: calc(100% - 28px);
@@ -472,30 +410,18 @@
       }
 
       .hero,
-      .doors {
-        grid-template-columns: 1fr;
-      }
+      .doors { grid-template-columns: 1fr; }
 
       .hero {
         padding: 42px 7%;
         gap: 25px;
       }
 
-      section {
-        padding: 42px 7%;
-      }
+      section { padding: 42px 7%; }
+      h1 { font-size: 42px; }
+      .btn { max-width: 100%; }
 
-      h1 {
-        font-size: 42px;
-      }
-
-      .btn {
-        max-width: 100%;
-      }
-
-      .ebook {
-        padding: 42px 7%;
-      }
+      .ebook { padding: 42px 7%; }
 
       .ebook .btn {
         width: 100%;
@@ -528,7 +454,7 @@
     <a href="coaching.html">Coaching</a>
     <a href="tarifs.html">Tarifs</a>
     <a href="avis.html">Avis</a>
-    <a href="julie.html">Julie</a>
+    <a href="julie.html">Qui suis-je ?</a>
     <a href="studio.html">Studio</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -566,8 +492,6 @@
     <p><strong>Un studio à taille humaine.</strong></p>
     <p>Petits groupes de 4 à 5 personnes · Convivialité · Bienveillance</p>
   </div>
-
-  <!-- NOUVELLE SECTION : EBOOK GRATUIT -->
 
   <section class="ebook" id="guide-gratuit">
     <p class="kicker">Votre cadeau de bienvenue</p>
