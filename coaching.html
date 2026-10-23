@@ -1,13 +1,10 @@
 
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Coaching de pole dance personnalisé à Soulières près d'Épernay, en individuel, en duo, à domicile ou en visio. Progressez à votre rythme avec Yog'n Moov.">
-  <title>Coaching personnalisé | Yog'n Moov Pole Dance</title>
-
-  <style>
+  <title>Coaching personnalisé | Yog'n Moov Pole Dance</title>  <style>
     :root{--black:#191716;--cream:#f8f0e4;--white:#fffdfa;--berry:#80334f;--gold:#c7a35d;--text:#332d29;--line:#ded2c2;--pink:#f3e1e6}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -28,6 +25,92 @@
     h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
     h1{margin:35px auto 30px;max-width:760px;color:var(--berry);font-size:clamp(2.45rem,6vw,4rem);line-height:1.2;text-align:center}
     .hero p:not(.eyebrow){max-width:760px;margin:14px auto 0;font-size:clamp(1.05rem,2.6vw,1.35rem);text-align:center;color:#e7dfd6}
+
+    /* Encart initiation */
+    .initiation-box{
+      position:relative;
+      isolation:isolate;
+      overflow:hidden;
+      background:var(--black);
+      color:var(--cream);
+      border:1px solid var(--gold);
+      border-radius:8px;
+      padding:clamp(28px,5vw,42px) 24px;
+      margin:0 auto 58px;
+      text-align:center;
+      box-shadow:0 10px 28px rgba(25,23,22,.12);
+      animation:initiation-float 5s ease-in-out infinite;
+    }
+    .initiation-box::before{
+      content:"";
+      position:absolute;
+      z-index:-1;
+      top:-40%;
+      left:-65%;
+      width:45%;
+      height:180%;
+      background:linear-gradient(90deg,transparent,rgba(199,163,93,.15),transparent);
+      transform:rotate(18deg);
+      animation:initiation-shine 7s ease-in-out infinite;
+      pointer-events:none;
+    }
+    .initiation-icon{
+      display:block;
+      color:var(--gold);
+      font-size:1.6rem;
+      line-height:1;
+      margin-bottom:12px;
+    }
+    .initiation-label{
+      margin:0 0 8px;
+      color:var(--gold);
+      font-size:.82rem;
+      font-weight:700;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .initiation-box h2{
+      margin:0 0 12px;
+      color:var(--cream);
+      font-size:clamp(1.8rem,4.5vw,2.6rem);
+      line-height:1.2;
+    }
+    .initiation-box > p:not(.initiation-label){
+      max-width:620px;
+      margin:0 auto 24px;
+      color:#e7dfd6;
+      font-size:1.05rem;
+    }
+    .initiation-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:13px 26px;
+      border:2px solid var(--gold);
+      border-radius:999px;
+      background:var(--gold);
+      color:var(--black);
+      font-weight:800;
+      text-decoration:none;
+      transition:transform .2s ease,background .2s ease;
+    }
+    .initiation-button:hover{
+      transform:translateY(-2px);
+      background:#e2bd71;
+    }
+    @keyframes initiation-float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-4px)}
+    }
+    @keyframes initiation-shine{
+      0%,65%{left:-65%}
+      100%{left:130%}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .initiation-box,.initiation-box::before{animation:none}
+      .initiation-button{transition:none}
+    }
 
     .section-intro{text-align:center;margin:0 auto 30px;max-width:800px}
     .section-intro .eyebrow{color:#9c814a}
@@ -80,14 +163,13 @@
       .container{width:calc(100% - 24px)}
       .hero{margin:20px auto 42px;padding:34px 22px}
       .hero h1{margin:28px auto 25px}
+      .initiation-box{margin-bottom:42px;padding:28px 20px}
+      .initiation-button{width:100%;max-width:320px}
       .cards{grid-template-columns:1fr;gap:16px;margin-bottom:42px}
       .card{min-height:0;padding:27px 22px}
       .button{width:100%}
     }
-  </style>
-</head>
-
-<body>
+  </style></head><body>
   <header class="site-header">
     <div class="brand">
       <img class="logo" src="logo-yognmoov.png" alt="Logo Yog'n Moov">
@@ -95,102 +177,107 @@
         <p class="brand-title">Yog'n Moov</p>
         <p class="brand-subtitle">POLE DANCE</p>
       </div>
-    </div>
+    </div><nav class="nav" aria-label="Navigation principale">
+  <a href="index.html">Accueil</a>
+  <a href="pole.html">La pole</a>
+  <a href="cours.html">Cours</a>
+  <a href="coaching.html" aria-current="page">Coaching</a>
+  <a href="tarifs.html">Tarifs</a>
+  <a href="avis.html">Avis</a>
+  <a href="julie.html">Qui suis-je ?</a>
+  <a href="studio.html">Studio</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-    <nav class="nav" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="pole.html">La pole</a>
-      <a href="cours.html">Cours</a>
-      <a href="coaching.html" aria-current="page">Coaching</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="avis.html">Avis</a>
-      <a href="julie.html">Julie</a>
-      <a href="studio.html">Studio</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="container">
+  </header>  <main class="container">
     <section class="hero">
       <p class="eyebrow">Un accompagnement personnalisé</p>
       <h1>Votre progression, votre rythme, vos objectifs.</h1>
       <p>Envie de travailler une figure, de consolider vos bases ou de prendre confiance sur la barre ? Le coaching permet de bénéficier d'un accompagnement adapté à vos besoins.</p>
       <p>Chez Yog'n Moov, chacun peut trouver sa place. Les coachings sont ouverts à tous, quels que soient votre parcours, votre expérience ou vos objectifs.</p>
       <p><strong>Pas de compétition, pas de comparaison :</strong> nous avançons ensemble, à votre rythme, dans un cadre bienveillant.</p>
-    </section>
+    </section><section class="initiation-box" aria-labelledby="initiation-title">
+  <span class="initiation-icon" aria-hidden="true">✦</span>
+  <p class="initiation-label">Envie de découvrir la pole ?</p>
+  <h2 id="initiation-title">Réserve ton initiation !</h2>
+  <p>Aucun prérequis. Viens essayer dans une ambiance conviviale et bienveillante.</p>
+  <a class="initiation-button"
+     href="sms:+33632514950?body=Bonjour%20Julie%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20%C3%A0%20la%20pole%20dance%20chez%20Yog%27n%20Moov.%20Merci%20%21">
+    Je réserve par SMS
+  </a>
+</section>
 
-    <section aria-labelledby="coaching-title">
-      <div class="section-intro">
-        <p class="eyebrow">Choisissez votre formule</p>
-        <h2 id="coaching-title">Un coaching adapté à vos envies</h2>
-        <p>En individuel, en duo, à domicile ou en visio, nous choisissons ensemble une formule qui correspond à votre pratique et à vos envies.</p>
-      </div>
+<section aria-labelledby="coaching-title">
+  <div class="section-intro">
+    <p class="eyebrow">Choisissez votre formule</p>
+    <h2 id="coaching-title">Un coaching adapté à vos envies</h2>
+    <p>En individuel, en duo, à domicile ou en visio, nous choisissons ensemble une formule qui correspond à votre pratique et à vos envies.</p>
+  </div>
 
-      <div class="cards">
-        <article class="card">
-          <span class="card-label">Individuel</span>
-          <h3>Un accompagnement personnalisé</h3>
-          <p>Profitez d'une séance rien que pour vous afin de travailler vos objectifs, revoir certains mouvements et bénéficier de conseils adaptés à votre rythme.</p>
-        </article>
+  <div class="cards">
+    <article class="card">
+      <span class="card-label">Individuel</span>
+      <h3>Un accompagnement personnalisé</h3>
+      <p>Profitez d'une séance rien que pour vous afin de travailler vos objectifs, revoir certains mouvements et bénéficier de conseils adaptés à votre rythme.</p>
+    </article>
 
-        <article class="card pink">
-          <span class="card-label">À deux</span>
-          <h3>Le coaching en duo</h3>
-          <p>Partagez une séance avec un proche, un partenaire ou une amie. Chacun peut avancer à son rythme tout en profitant de ce moment à deux.</p>
-        </article>
+    <article class="card pink">
+      <span class="card-label">À deux</span>
+      <h3>Le coaching en duo</h3>
+      <p>Partagez une séance avec un proche, un partenaire ou une amie. Chacun peut avancer à son rythme tout en profitant de ce moment à deux.</p>
+    </article>
 
-        <article class="card gold">
-          <span class="card-label">Technique</span>
-          <h3>Travailler une figure précise</h3>
-          <p>Placement, coordination, transitions, fluidité ou découverte d'un nouveau mouvement : nous ciblons ensemble les points que vous souhaitez travailler.</p>
-        </article>
+    <article class="card gold">
+      <span class="card-label">Technique</span>
+      <h3>Travailler une figure précise</h3>
+      <p>Placement, coordination, transitions, fluidité ou découverte d'un nouveau mouvement : nous ciblons ensemble les points que vous souhaitez travailler.</p>
+    </article>
 
-        <article class="card dark">
-          <span class="card-label">Confiance</span>
-          <h3>Oser et progresser à son rythme</h3>
-          <p>Prenez le temps d'apprivoiser la barre, de découvrir vos capacités et de reconnaître vos progrès, sans pression ni comparaison.</p>
-        </article>
+    <article class="card dark">
+      <span class="card-label">Confiance</span>
+      <h3>Oser et progresser à son rythme</h3>
+      <p>Prenez le temps d'apprivoiser la barre, de découvrir vos capacités et de reconnaître vos progrès, sans pression ni comparaison.</p>
+    </article>
 
-        <article class="card pink">
-          <span class="card-label">À domicile</span>
-          <h3>Un coaching chez vous</h3>
-          <p>Vous avez une barre chez vous ? Selon votre installation, les conditions de sécurité et la distance, nous pouvons envisager une séance à domicile.</p>
-        </article>
+    <article class="card pink">
+      <span class="card-label">À domicile</span>
+      <h3>Un coaching chez vous</h3>
+      <p>Vous avez une barre chez vous ? Selon votre installation, les conditions de sécurité et la distance, nous pouvons envisager une séance à domicile.</p>
+    </article>
 
-        <article class="card">
-          <span class="card-label">À distance</span>
-          <h3>Le coaching en visio</h3>
-          <p>Vous pratiquez à la maison et souhaitez des conseils personnalisés ? Une séance en visio peut vous aider à faire le point sur votre technique et vos objectifs.</p>
-          <p>Les mouvements sont choisis selon votre installation et les conditions de sécurité. Certaines figures ne peuvent pas être encadrées à distance.</p>
-        </article>
-      </div>
-    </section>
+    <article class="card">
+      <span class="card-label">À distance</span>
+      <h3>Le coaching en visio</h3>
+      <p>Vous pratiquez à la maison et souhaitez des conseils personnalisés ? Une séance en visio peut vous aider à faire le point sur votre technique et vos objectifs.</p>
+      <p>Les mouvements sont choisis selon votre installation et les conditions de sécurité. Certaines figures ne peuvent pas être encadrées à distance.</p>
+    </article>
+  </div>
+</section>
 
-    <section class="steps">
-      <p class="eyebrow">Simplement, étape par étape</p>
-      <h2>Comment ça se passe ?</h2>
-      <p class="steps-intro">Le coaching se construit autour de vos envies, de votre niveau et de vos objectifs.</p>
-      <ol>
-        <li><strong>Nous échangeons sur vos envies.</strong> Vous m'expliquez votre expérience, vos objectifs et ce que vous aimeriez travailler.</li>
-        <li><strong>Nous préparons votre séance.</strong> Le contenu est adapté à votre pratique, à vos capacités et aux conditions de sécurité.</li>
-        <li><strong>Nous avançons ensemble.</strong> Nous prenons le temps de travailler les mouvements et d'adapter les exercices selon vos besoins.</li>
-      </ol>
-    </section>
+<section class="steps">
+  <p class="eyebrow">Simplement, étape par étape</p>
+  <h2>Comment ça se passe ?</h2>
+  <p class="steps-intro">Le coaching se construit autour de vos envies, de votre niveau et de vos objectifs.</p>
+  <ol>
+    <li><strong>Nous échangeons sur vos envies.</strong> Vous m'expliquez votre expérience, vos objectifs et ce que vous aimeriez travailler.</li>
+    <li><strong>Nous préparons votre séance.</strong> Le contenu est adapté à votre pratique, à vos capacités et aux conditions de sécurité.</li>
+    <li><strong>Nous avançons ensemble.</strong> Nous prenons le temps de travailler les mouvements et d'adapter les exercices selon vos besoins.</li>
+  </ol>
+</section>
 
-    <section class="contact" id="contact">
-      <p class="eyebrow">Parlons de votre projet</p>
-      <h2>Envie d'un coaching ?</h2>
-      <p>Contactez-moi pour m'expliquer ce que vous recherchez. Nous verrons ensemble quelle formule pourrait vous convenir.</p>
-      <p class="availability">Yog'n Moov Pole Dance · Soulières (51130), près d'Épernay</p>
-      <div class="buttons">
-        <a class="button email" href="tel:+33632514950">☎ Appeler le 06 32 51 49 50</a>
-        <a class="button sms" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a class="button sms" href="mailto:poledancejulie@gmail.com?subject=Coaching%20Yog%27n%20Moov">✉ Envoyer un e-mail</a>
-      </div>
-    </section>
-  </main>
+<section class="contact" id="contact">
+  <p class="eyebrow">Parlons de votre projet</p>
+  <h2>Envie d'un coaching ?</h2>
+  <p>Contactez-moi pour m'expliquer ce que vous recherchez. Nous verrons ensemble quelle formule pourrait vous convenir.</p>
+  <p class="availability">Yog'n Moov Pole Dance · Soulières (51130), près d'Épernay</p>
+  <div class="buttons">
+    <a class="button email" href="tel:+33632514950">☎ Appeler le 06 32 51 49 50</a>
+    <a class="button sms" href="https://wa.me/33632514950" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="button sms" href="mailto:poledancejulie@gmail.com?subject=Coaching%20Yog%27n%20Moov">✉ Envoyer un e-mail</a>
+  </div>
+</section>
 
-  <footer>
+  </main>  <footer>
     <p><strong>Yog'n Moov · Pole Dance</strong></p>
     <p>Soulières (51130), à environ 15 minutes d'Épernay</p>
     <p>06 32 51 49 50 · <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">www.yognmoov.fr</a></p>
