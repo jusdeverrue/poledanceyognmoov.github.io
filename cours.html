@@ -1,737 +1,608 @@
 
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Les cours de pole dance | Yog’n Moov à Soulières</title>
-  <meta name="description" content="Découvrez les cours de pole dance Yog’n Moov à Soulières, près d’Épernay. Initiation, cours collectifs, individuels, duos et stages. Aucun prérequis.">
-  <meta name="theme-color" content="#171615">
-
-  <style>
-    :root {
-      --black: #171615;
-      --gold: #c5a15a;
-      --cream: #f5efe6;
-      --pink: #d9a6af;
-      --white: #ffffff;
-      --text: #292522;
-      --muted: #6d655d;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.7;
-      padding-bottom: 75px;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    header {
-      background: var(--black);
-      color: var(--white);
-      padding: 16px 20px 20px;
-      text-align: center;
-    }
-
-    .logo {
-      display: block;
-      width: 112px;
-      max-width: 35%;
-      height: auto;
-      margin: 0 auto 10px;
-    }
-
-    header p {
-      margin: 0;
-      color: #e8dfd2;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-      padding: 15px 16px;
-      background: #24211e;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--gold);
-    }
-
-    /* Réservation visible dès le haut de page */
-    .booking-banner {
-      background: var(--gold);
-      color: var(--black);
-      padding: 16px 15px;
-      text-align: center;
-    }
-
-    .booking-banner p {
-      margin: 0 0 9px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .booking-banner .booking-button {
-      display: inline-block;
-      min-width: 130px;
-      margin: 4px;
-      padding: 11px 17px;
-      background: var(--black);
-      color: var(--white);
-      border: 2px solid var(--black);
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .booking-banner .booking-button:hover {
-      background: var(--cream);
-      color: var(--black);
-    }
-
-    .hero {
-      padding: 52px 20px;
-      text-align: center;
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-      line-height: 1.25;
-    }
-
-    h1 {
-      margin: 0 auto 16px;
-      max-width: 850px;
-      font-size: clamp(32px, 5vw, 52px);
-    }
-
-    .hero p {
-      max-width: 680px;
-      margin: 0 auto;
-      color: #e8dfd2;
-      font-size: 16px;
-    }
-
-    .hero .hero-note {
-      margin-top: 16px;
-      color: var(--pink);
-      font-weight: bold;
-    }
-
-    .intro {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 45px 22px 25px;
-      text-align: center;
-    }
-
-    .intro h2 {
-      margin: 0 0 14px;
-      font-size: 30px;
-    }
-
-    .intro p {
-      max-width: 760px;
-      margin: 0 auto 12px;
-    }
-
-    .highlight {
-      color: #7a5d27;
-      font-weight: bold;
-    }
-
-    .courses {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 20px 22px 55px;
-    }
-
-    .courses-heading {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .courses-heading h2 {
-      font-size: 32px;
-      margin: 0 0 8px;
-    }
-
-    .courses-heading p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .course-card {
-      background: var(--white);
-      border: 1px solid #e3d8c9;
-      border-top: 4px solid var(--gold);
-      padding: 25px;
-      border-radius: 5px;
-    }
-
-    .course-card h3 {
-      margin: 0 0 10px;
-      font-size: 24px;
-    }
-
-    .course-card p {
-      margin: 0 0 10px;
-    }
-
-    .course-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .small-label {
-      color: #85652d;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .approach {
-      background: #eae0d2;
-      padding: 48px 22px;
-    }
-
-    .approach-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .approach h2 {
-      margin: 0 0 16px;
-      font-size: 31px;
-    }
-
-    .approach p {
-      margin: 0 auto 12px;
-      max-width: 760px;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-      text-align: center;
-    }
-
-    .benefit {
-      padding: 18px 12px;
-      background: rgba(255, 255, 255, 0.65);
-      border-radius: 4px;
-    }
-
-    .benefit strong {
-      display: block;
-      margin-bottom: 4px;
-      color: #6e5125;
-    }
-
-    .practical {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 50px 22px;
-    }
-
-    .practical h2 {
-      margin: 0 0 18px;
-      text-align: center;
-      font-size: 31px;
-    }
-
-    .practical-list {
-      max-width: 650px;
-      margin: 0 auto;
-      padding-left: 24px;
-    }
-
-    .practical-list li {
-      margin-bottom: 8px;
-    }
-
-    .booking-section {
-      padding: 48px 22px;
-      text-align: center;
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .booking-section .eyebrow {
-      margin-bottom: 8px;
-    }
-
-    .booking-section h2 {
-      margin: 0 0 14px;
-      font-size: 34px;
-    }
-
-    .booking-section p {
-      max-width: 680px;
-      margin: 0 auto 18px;
-      color: #e8dfd2;
-    }
-
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 22px auto;
-    }
-
-    .contact-buttons a {
-      display: inline-block;
-      padding: 12px 20px;
-      border: 2px solid var(--gold);
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .contact-buttons a.secondary {
-      background: transparent;
-      color: var(--white);
-    }
-
-    .contact-buttons a:hover {
-      background: var(--cream);
-      color: var(--black);
-      border-color: var(--cream);
-    }
-
-    .special-request {
-      max-width: 800px;
-      margin: 30px auto 0;
-      padding: 22px;
-      border: 1px solid #675638;
-      border-radius: 5px;
-    }
-
-    .special-request h3 {
-      margin: 0 0 8px;
-      color: var(--gold);
-      font-size: 25px;
-    }
-
-    .special-request p {
-      margin-bottom: 0;
-    }
-
-    footer {
-      padding: 25px 20px 30px;
-      text-align: center;
-      background: #100f0e;
-      color: #d9d0c4;
-      font-size: 13px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    /* Appels et SMS toujours accessibles */
-    .sticky-booking {
-      position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: 10px;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      pointer-events: none;
-    }
-
-    .sticky-booking a {
-      flex: 1;
-      max-width: 220px;
-      padding: 12px 8px;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-      color: var(--black);
-      background: var(--gold);
-      border: 2px solid var(--black);
-      border-radius: 5px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-      pointer-events: auto;
-    }
-
-    .sticky-booking a:hover {
-      background: #e6d3a9;
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        gap: 10px 15px;
-      }
-
-      .course-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .benefits {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 42px 20px;
-      }
-
-      .intro h2,
-      .courses-heading h2,
-      .approach h2,
-      .practical h2 {
-        font-size: 27px;
-      }
-
-      .booking-section h2 {
-        font-size: 29px;
-      }
-
-      .booking-banner .booking-button {
-        min-width: 125px;
-      }
-
-      .sticky-booking a {
-        font-size: 13px;
-        padding: 12px 5px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <a href="index.html" aria-label="Accueil Yog’n Moov">
-      <img
-        class="logo"
-        src="logo-yognmoov.png"
-        alt="Logo Yog’n Moov Pole Dance"
-      >
-    </a>
-    <p>Pole dance · Yoga · Pilates</p>
-  </header>
-
-  <nav aria-label="Navigation principale">
-    <a href="index.html">Accueil</a>
-    <a href="pole.html">La pole</a>
-    <a href="cours.html" class="active">Cours</a>
-    <a href="coaching.html">Coaching</a>
-    <a href="tarifs.html">Tarifs</a>
-    <a href="avis.html">Avis</a>
-    <a href="julie.html">Qui suis-je ?</a>
-    <a href="studio.html">Studio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="booking-banner">
-    <p>Envie de découvrir la pole dance ? Réservez votre initiation !</p>
-    <a class="booking-button" href="tel:+33632514950">
-      📞 Appeler
-    </a>
-    <a
-      class="booking-button"
-      href="sms:+33632514950?body=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20de%20pole%20dance%20chez%20Yog%27n%20Moov."
-    >
-      💬 Envoyer un SMS
-    </a>
-  </div>
-
-  <section class="hero">
-    <p class="eyebrow">Yog’n Moov · Soulières</p>
-    <h1>Les cours de pole dance</h1>
-    <p>
-      Découvrez une activité complète, ludique et accessible,
-      dans un studio intimiste près d’Épernay.
-    </p>
-    <p class="hero-note">
-      Aucun prérequis · Tous les niveaux · Femmes et hommes
-    </p>
-  </section>
-
-  <main>
-
-    <section class="intro">
-      <h2>La pole dance à votre rythme</h2>
-      <p>
-        Vous n’avez jamais pratiqué ? Vous pensez manquer de force,
-        de souplesse ou d’expérience sportive ? Ce n’est pas un problème.
-      </p>
-      <p>
-        Chez <strong>Yog’n Moov</strong>, chacun progresse à son rythme,
-        dans une ambiance conviviale, sans jugement ni compétition.
-        L’objectif est de découvrir, d’apprendre et de prendre confiance,
-        tout en se faisant plaisir.
-      </p>
-      <p class="highlight">
-        Les cours se déroulent en petit comité, avec deux barres,
-        pour favoriser l’accompagnement et les conseils personnalisés.
-      </p>
-    </section>
-
-    <section class="courses">
-      <div class="courses-heading">
-        <h2>Choisissez votre formule</h2>
-        <p>Une pratique adaptée à vos envies et à votre expérience.</p>
-      </div>
-
-      <div class="course-grid">
-
-        <article class="course-card">
-          <p class="small-label">Pour commencer</p>
-          <h3>L’initiation</h3>
-          <p>
-            Vous souhaitez essayer la pole dance pour la première fois ?
-            L’initiation vous permet de découvrir la barre, les premiers
-            mouvements et les sensations de cette discipline.
-          </p>
-          <p>
-            Un premier rendez-vous pour tester, vous amuser et voir si
-            cette activité vous plaît, sans pression.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <p class="small-label">Progresser ensemble</p>
-          <h3>Les cours collectifs</h3>
-          <p>
-            En petit groupe de 4 à 5 personnes maximum, vous apprenez
-            progressivement les figures, les enchaînements et les
-            différentes façons de bouger autour de la barre.
-          </p>
-          <p>
-            Le petit effectif permet de prendre le temps, de recevoir
-            des conseils et de progresser à votre rythme.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <p class="small-label">Un accompagnement sur mesure</p>
-          <h3>Les cours individuels</h3>
-          <p>
-            Vous souhaitez un accompagnement personnalisé, travailler
-            un mouvement précis ou avancer selon vos objectifs ?
-            Le cours individuel permet de se concentrer sur vos besoins.
-          </p>
-          <p>
-            Le contenu est adapté à votre niveau et à vos envies.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <p class="small-label">Partager l’expérience</p>
-          <h3>Les cours en duo</h3>
-          <p>
-            Venez pratiquer à deux : entre amies, en couple ou avec
-            la personne de votre choix. Une formule conviviale pour
-            découvrir la pole dance et progresser ensemble.
-          </p>
-          <p>
-            Contactez-moi pour organiser votre séance et connaître
-            les disponibilités.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <p class="small-label">Un moment à partager</p>
-          <h3>Parent-enfant</h3>
-          <p>
-            Découvrez une activité originale à partager avec votre enfant,
-            dans un cadre adapté et bienveillant.
-          </p>
-          <p>
-            Les séances sont organisées selon les disponibilités et
-            l’activité envisagée. Contactez-moi pour en discuter,
-            notamment si votre enfant est jeune.
-          </p>
-        </article>
-
-        <article class="course-card">
-          <p class="small-label">Pour aller plus loin</p>
-          <h3>Stages et demandes particulières</h3>
-          <p>
-            Vous avez une idée précise, un projet à préparer ou envie
-            d’une séance particulière ? Des formats personnalisés peuvent
-            être envisagés selon votre demande et les disponibilités.
-          </p>
-          <p>
-            Coaching, petits groupes, visio ou autre projet :
-            parlons-en ensemble.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="approach">
-      <div class="approach-inner">
-        <p class="eyebrow">L’esprit Yog’n Moov</p>
-        <h2>Un studio à taille humaine</h2>
-        <p>
-          Ici, pas besoin d’être déjà sportive, souple ou musclée.
-          Chacun arrive avec son histoire, ses capacités et ses envies.
-          Vous apprenez progressivement, sans vous comparer aux autres.
-        </p>
-        <p>
-          La pole dance permet de développer des capacités physiques,
-          mais aussi de relever des défis, de découvrir ce dont on est
-          capable et de gagner en confiance.
-        </p>
-
-        <div class="benefits">
-          <div class="benefit">
-            <strong>Petit groupe</strong>
-            <span>4 à 5 personnes maximum</span>
-          </div>
-          <div class="benefit">
-            <strong>À votre rythme</strong>
-            <span>Aucun prérequis nécessaire</span>
-          </div>
-          <div class="benefit">
-            <strong>Sans jugement</strong>
-            <span>Une ambiance conviviale et bienveillante</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="practical">
-      <p class="eyebrow" style="text-align:center;">Avant votre séance</p>
-      <h2>Comment vous préparer ?</h2>
-
-      <ul class="practical-list">
-        <li>Prévoyez un short et un débardeur ou une brassière de sport.</li>
-        <li>Venez sans crème ni huile sur la peau afin de ne pas glisser sur la barre.</li>
-        <li>Retirez vos bijoux avant la séance.</li>
-        <li>Prévoyez une bouteille d’eau, une serviette et, si vous le souhaitez, votre tapis.</li>
-        <li>Inutile de préparer des figures à l’avance : nous adaptons la séance à votre niveau.</li>
-      </ul>
-    </section>
-
-    <section class="booking-section" id="reservation">
-      <p class="eyebrow">À vous de jouer</p>
-      <h2>Prêt(e) à tenter l’expérience ?</h2>
-      <p>
-        Pour réserver votre initiation ou connaître les prochains créneaux,
-        contactez-moi directement. Les places étant limitées, la réservation
-        se fait par téléphone ou SMS.
-      </p>
-
-      <div class="contact-buttons">
-        <a href="tel:+33632514950">
-          📞 Appeler le 06 32 51 49 50
-        </a>
-
-        <a
-          class="secondary"
-          href="sms:+33632514950?body=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20de%20pole%20dance%20chez%20Yog%27n%20Moov."
-        >
-          💬 Envoyer un SMS
-        </a>
-      </div>
-
-      <div class="special-request">
-        <h3>Une demande particulière ?</h3>
-        <p>
-          Visio, cours en duo, coaching personnalisé ou autre projet…
-          Contactez-moi pour que nous puissions en discuter et voir
-          ce qui correspond le mieux à vos envies.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p><strong>Yog’n Moov Pole Dance</strong></p>
-    <p>Studio à Soulières, près d’Épernay</p>
-    <p>
-      <a href="tel:+33632514950">06 32 51 49 50</a>
-      ·
-      <a href="mailto:poledancejulie@gmail.com">Me contacter par e-mail</a>
-    </p>
-    <p>
-      <a href="https://instagram.com/yognmoov_julie" target="_blank" rel="noopener noreferrer">Instagram</a>
-      ·
-      <a href="https://www.facebook.com/share/17JPoeD2sn/" target="_blank" rel="noopener noreferrer">Facebook</a>
-      ·
-      <a href="https://www.tiktok.com/@yogn.moov" target="_blank" rel="noopener noreferrer">TikTok</a>
-    </p>
-    <p>
-      <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">Découvrir aussi le yoga et le Pilates</a>
-    </p>
-  </footer>
-
-  <div class="sticky-booking" aria-label="Réservation rapide">
-    <a href="tel:+33632514950">📞 Appeler</a>
-    <a href="sms:+33632514950?body=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20initiation%20de%20pole%20dance%20chez%20Yog%27n%20Moov.">💬 SMS</a>
-  </div>
-
-</body>
+<!DOCTYPE html>  <html lang="fr">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">    <title>Yog’n Moov | Pole dance près d’Épernay</title>  
+  <meta name="description" content="Yog’n Moov, studio de pole dance à Soulières près d’Épernay. Cours en petits groupes, aucun prérequis, coachings et pole sport. Téléchargez gratuitement le guide des débutantes.">  
+  <meta name="robots" content="index, follow">  
+  <link rel="canonical" href="https://yognmoovpoledance.github.io/">    <meta property="og:type" content="website">  
+  <meta property="og:title" content="Yog’n Moov Pole Dance près d’Épernay">  
+  <meta property="og:description" content="Découvrez la pole dance en petit groupe à Soulières, près d’Épernay, et recevez gratuitement votre guide pour débuter.">  
+  <meta property="og:url" content="https://yognmoovpoledance.github.io/">  
+  <meta property="og:image" content="https://yognmoovpoledance.github.io/studio-assise.jpg">  
+  <meta property="og:image:alt" content="Julie dans le studio de pole dance Yog’n Moov">    <style>  
+    :root {  
+      --black: #191716;  
+      --cream: #f8f0e4;  
+      --white: #fffdfa;  
+      --berry: #80334f;  
+      --gold: #c7a35d;  
+      --pink: #f3e1e6;  
+      --text: #332d29;  
+      --line: #ded2c2;  
+    }  
+  
+    * { box-sizing: border-box; }  
+  
+    html { scroll-behavior: smooth; }  
+  
+    body {  
+      margin: 0;  
+      background: var(--cream);  
+      color: var(--text);  
+      font-family: Arial, Helvetica, sans-serif;  
+      line-height: 1.7;  
+    }  
+  
+    a { color: inherit; }  
+  
+    .site-header {  
+      background: var(--black);  
+      color: var(--cream);  
+      border-bottom: 4px solid var(--gold);  
+      padding: 24px max(22px, calc((100% - 1120px) / 2)) 26px;  
+    }  
+  
+    .brand {  
+      display: flex;  
+      align-items: center;  
+      gap: 22px;  
+      min-height: 150px;  
+      margin-bottom: 36px;  
+    }  
+  
+    .logo {  
+      display: block;  
+      width: 150px;  
+      height: 150px;  
+      flex: 0 0 150px;  
+      object-fit: contain;  
+      border-radius: 50%;  
+      background: #fff;  
+      border: 3px solid var(--gold);  
+    }  
+  
+    .brand-title {  
+      margin: 0;  
+      color: #fffaf2;  
+      font-family: Georgia, "Times New Roman", serif;  
+      font-size: clamp(2rem, 5vw, 3.25rem);  
+      font-style: italic;  
+      line-height: 1.15;  
+    }  
+  
+    .brand-subtitle {  
+      margin: 10px 0 0;  
+      color: var(--gold);  
+      font-size: .95rem;  
+      letter-spacing: .25em;  
+    }  
+  
+    .nav {  
+      display: flex;  
+      flex-wrap: wrap;  
+      gap: 10px 28px;  
+      align-items: center;  
+    }  
+  
+    .nav a {  
+      color: #f8f0e8;  
+      text-decoration: none;  
+      font-size: 1.05rem;  
+      padding: 5px 0 8px;  
+      border-bottom: 4px solid transparent;  
+    }  
+  
+    .nav a:hover,  
+    .nav a[aria-current="page"] {  
+      color: #a64a6b;  
+      border-bottom-color: var(--berry);  
+    }  
+  
+    main {  
+      width: min(100% - 44px, 1120px);  
+      margin: 36px auto;  
+      background: var(--black);  
+      color: var(--cream);  
+      border-radius: 14px;  
+      overflow: hidden;  
+      box-shadow: 0 5px 18px rgba(25, 23, 22, .08);  
+    }  
+  
+    section { padding: 55px 7%; }  
+  
+    .hero {  
+      background: var(--black);  
+      color: var(--cream);  
+      display: grid;  
+      grid-template-columns: 1.1fr .9fr;  
+      align-items: center;  
+      gap: 40px;  
+      padding-top: 65px;  
+      padding-bottom: 65px;  
+    }  
+  
+    .hero img {  
+      display: block;  
+      width: 100%;  
+      height: auto;  
+      object-fit: contain;  
+      object-position: center;  
+      border: 1px solid var(--gold);  
+    }  
+  
+    .kicker {  
+      color: var(--gold);  
+      text-transform: uppercase;  
+      font-size: 11px;  
+      letter-spacing: 3px;  
+      font-weight: bold;  
+    }  
+  
+    h1, h2, h3 {  
+      font-family: Georgia, "Times New Roman", serif;  
+      font-weight: normal;  
+      line-height: 1.25;  
+    }  
+  
+    h1 {  
+      font-size: clamp(38px, 5vw, 64px);  
+      margin: 18px 0;  
+      color: var(--gold);  
+    }  
+  
+    h2 {  
+      font-size: clamp(30px, 4vw, 43px);  
+      margin-top: 10px;  
+      color: var(--gold);  
+    }  
+  
+    h3 { font-size: 25px; }  
+  
+    .lead {  
+      font-size: 17px;  
+      color: #e0d8ce;  
+    }  
+  
+    .hero-note {  
+      font-size: 12px;  
+      color: var(--pink);  
+      margin-top: 25px;  
+    }  
+  
+    .btn {  
+      display: inline-block;  
+      background: var(--gold);  
+      color: var(--black);  
+      text-decoration: none;  
+      padding: 12px 20px;  
+      margin: 8px 5px;  
+      font-size: 13px;  
+      font-weight: bold;  
+      border: 1px solid var(--gold);  
+      border-radius: 3px;  
+      text-align: center;  
+      transition: background .2s, transform .2s;  
+    }  
+  
+    .btn:hover {  
+      background: #e6d3a9;  
+      transform: translateY(-1px);  
+    }  
+  
+    .btn.alt {  
+      background: transparent;  
+      color: var(--pink);  
+      border-color: var(--pink);  
+    }  
+  
+    .btn.alt:hover {  
+      background: var(--pink);  
+      color: var(--black);  
+    }  
+  
+    .band {  
+      background: var(--gold);  
+      color: var(--black);  
+      text-align: center;  
+      padding: 28px 8%;  
+    }  
+  
+    .band p { margin: 5px 0; }  
+    .band a { font-weight: bold; }  
+  
+    .ebook {  
+      background: var(--pink);  
+      color: var(--text);  
+      text-align: center;  
+      padding: 58px 8%;  
+      border-top: 3px solid var(--gold);  
+      border-bottom: 3px solid var(--gold);  
+    }  
+  
+    .ebook .kicker { color: var(--berry); }  
+  
+    .ebook h2 {  
+      color: var(--berry);  
+      max-width: 760px;  
+      margin: 12px auto 20px;  
+    }  
+  
+    .ebook p {  
+      max-width: 700px;  
+      margin: 12px auto;  
+    }  
+  
+    .ebook-intro { font-size: 18px; }  
+  
+    .ebook-highlight {  
+      font-weight: bold;  
+      color: var(--berry);  
+    }  
+  
+    .ebook .btn {  
+      background: var(--berry);  
+      color: var(--white);  
+      border-color: var(--berry);  
+      font-size: 15px;  
+      padding: 15px 25px;  
+      margin-top: 18px;  
+    }  
+  
+    .ebook .btn:hover {  
+      background: #62243b;  
+      border-color: #62243b;  
+    }  
+  
+    .ebook-small {  
+      font-size: 12px;  
+      opacity: .85;  
+      margin-top: 15px !important;  
+    }  
+  
+    .chips {  
+      display: flex;  
+      flex-wrap: wrap;  
+      gap: 10px;  
+      list-style: none;  
+      padding: 0;  
+      margin-top: 25px;  
+    }  
+  
+    .chips li {  
+      border: 1px solid var(--gold);  
+      background: var(--cream);  
+      color: var(--text);  
+      padding: 8px 15px;  
+      font-size: 13px;  
+    }  
+  
+    .doors {  
+      background: #24211f;  
+      color: var(--cream);  
+      display: grid;  
+      grid-template-columns: 1fr 1fr;  
+      gap: 24px;  
+    }  
+  
+    .door {  
+      display: block;  
+      padding: 28px;  
+      border: 1px solid var(--gold);  
+      border-radius: 8px;  
+      text-decoration: none;  
+      color: var(--cream);  
+    }  
+  
+    .door:hover { background: #302a27; }  
+    .door h2 { color: var(--gold); }  
+  
+    .door.alt {  
+      background: var(--pink);  
+      color: var(--text);  
+    }  
+  
+    .door.alt h2,  
+    .door.alt .kicker {  
+      color: var(--berry);  
+    }  
+  
+    .soft {  
+      background: #24211f;  
+      border-top: 1px solid #514538;  
+      border-bottom: 1px solid #514538;  
+    }  
+  
+    .pink-band {  
+      background: var(--pink);  
+      color: var(--text);  
+      border-top: 2px solid #d9a6af;  
+      border-bottom: 2px solid #d9a6af;  
+    }  
+  
+    .pink-band h2,  
+    .pink-band .kicker {  
+      color: var(--berry);  
+    }  
+  
+    footer {  
+      background: var(--black);  
+      color: #d2cbc0;  
+      text-align: center;  
+      padding: 40px 7%;  
+      font-size: 13px;  
+      border-top: 3px solid var(--gold);  
+    }  
+  
+    footer a { color: var(--pink); }  
+  
+    .footer-brand {  
+      color: var(--gold);  
+      font-family: Georgia, "Times New Roman", serif;  
+      font-size: 27px;  
+      font-weight: bold;  
+    }  
+  
+    .footer-yoga {  
+      margin: 28px auto 20px;  
+      padding: 22px 15px;  
+      max-width: 520px;  
+      border-top: 1px solid var(--gold);  
+      border-bottom: 1px solid var(--gold);  
+    }  
+  
+    .footer-yoga h3 {  
+      color: var(--gold);  
+      font-size: 23px;  
+      margin: 5px 0 10px;  
+    }  
+  
+    .footer-yoga a {  
+      display: inline-block;  
+      margin-top: 8px;  
+      color: var(--gold);  
+      font-weight: bold;  
+      text-decoration: none;  
+    }  
+  
+    .footer-yoga a:hover { color: var(--pink); }  
+  
+    @media (max-width: 760px) {  
+      .site-header { padding: 20px 20px 24px; }  
+  
+      .brand {  
+        min-height: 0;  
+        gap: 14px;  
+        margin-bottom: 35px;  
+      }  
+  
+      .logo {  
+        width: 112px;  
+        height: 112px;  
+        flex: 0 0 112px;  
+      }  
+  
+      .brand-title {  
+        font-size: clamp(1.8rem, 7vw, 2.5rem);  
+      }  
+  
+      .brand-subtitle {  
+        margin-top: 10px;  
+        font-size: .8rem;  
+        letter-spacing: .2em;  
+      }  
+  
+      .nav { gap: 10px 19px; }  
+      .nav a { font-size: 1rem; }  
+  
+      main {  
+        width: calc(100% - 28px);  
+        margin: 22px auto;  
+        border-radius: 12px;  
+      }  
+  
+      .hero,  
+      .doors { grid-template-columns: 1fr; }  
+  
+      .hero {  
+        padding: 42px 7%;  
+        gap: 25px;  
+      }  
+  
+      section { padding: 42px 7%; }  
+      h1 { font-size: 42px; }  
+      .btn { max-width: 100%; }  
+  
+      .ebook { padding: 42px 7%; }  
+  
+      .ebook .btn {  
+        width: 100%;  
+        margin-left: 0;  
+        margin-right: 0;  
+      }  
+    }  
+  </style>  </head>  <body>  <header class="site-header">  
+  <div class="brand">  
+    <img  
+      class="logo"  
+      src="logo-yognmoov.png"  
+      alt="Logo Yog'n Moov"  
+    >  
+    <div>  
+      <p class="brand-title">Yog'n Moov</p>  
+      <p class="brand-subtitle">POLE DANCE</p>  
+    </div>  
+  </div>    <nav class="nav" aria-label="Navigation principale">  
+    <a href="index.html" aria-current="page">Accueil</a>  
+    <a href="pole.html">La pole</a>  
+    <a href="cours.html">Cours</a>  
+    <a href="coaching.html">Coaching</a>  
+    <a href="tarifs.html">Tarifs</a>  
+    <a href="avis.html">Avis</a>  
+    <a href="julie.html">Qui suis-je ?</a>  
+    <a href="studio.html">Studio</a>  
+    <a href="contact.html">Contact</a>  
+  </nav>  
+</header>  <main>    <section class="hero">  
+    <div>  
+      <p class="kicker">La pole dance, autrement</p>  <h1>Osez découvrir tout ce dont votre corps est capable.</h1>  
+
+  <p class="lead">  
+    Pas besoin d’être souple, musclé ou expérimenté.  
+    Venez comme vous êtes, progressez à votre rythme et découvrez  
+    une activité aussi sportive qu’épanouissante.  
+  </p>  
+
+  <a class="btn" href="cours.html">Découvrir les cours</a>  
+  <a class="btn alt" href="contact.html">Me contacter</a>  
+
+  <p class="hero-note">  
+    Femmes et hommes · Aucun prérequis · Tous les niveaux  
+  </p>  
+</div>  
+
+<img  
+  src="studio-assise.jpg"  
+  alt="Julie dans le studio de pole dance Yog'n Moov à Soulières"  
+>
+
+  </section>    <div class="band">  
+    <p><strong>Un studio à taille humaine.</strong></p>  
+    <p>Petits groupes de 4 à 5 personnes · Convivialité · Bienveillance</p>  
+  </div>    <section class="ebook" id="guide-gratuit">  
+    <p class="kicker">Votre cadeau de bienvenue</p>  <h2>Vous avez envie de commencer la pole dance, mais vous hésitez encore ?</h2>  
+
+<p class="ebook-intro">  
+  J’ai préparé un guide gratuit pour vous aider à y voir plus clair  
+  et à éviter les erreurs qui peuvent freiner les débutantes.  
+</p>  
+
+<p class="ebook-highlight">  
+  Découvrez : « Les 3 erreurs qui bloquent 90 % des débutantes en pole dance »  
+</p>  
+
+<p>  
+  Que vous n’ayez jamais pratiqué ou que vous n’osiez pas encore vous lancer,  
+  ce guide est un premier pas pour aborder la pole dance plus sereinement.  
+</p>  
+
+<a  
+  class="btn"  
+  href="https://julieprevost.systeme.io/561b142c"  
+  target="_blank"  
+  rel="noopener noreferrer"  
+>  
+  Télécharger mon guide gratuit  
+</a>  
+
+<p class="ebook-small">  
+  Cliquez sur le bouton pour accéder à la page du guide gratuit.  
+</p>
+
+  </section>    <section>  
+    <p class="kicker">Bien plus qu’une figure</p>  <h2>Un espace pour bouger, oser et progresser.</h2>  
+
+<p>  
+  Chez Yog’n Moov, pas de compétition entre élèves ni de pression  
+  sur les performances ou l’apparence. L’objectif est de prendre  
+  confiance, de développer sa force, sa mobilité et sa coordination,  
+  tout en se faisant plaisir.  
+</p>  
+
+<ul class="chips">  
+  <li>Force</li>  
+  <li>Mobilité</li>  
+  <li>Coordination</li>  
+  <li>Équilibre</li>  
+  <li>Souplesse</li>  
+  <li>Confiance en soi</li>  
+</ul>
+
+  </section>    <section class="doors">  
+    <a class="door" href="cours.html">  
+      <p class="kicker">Pour découvrir</p>  
+      <h2>Les cours au studio</h2>  
+      <p>  
+        Des petits groupes, un accompagnement attentif et une ambiance  
+        conviviale à Soulières.  
+      </p>  
+      <p>Découvrir les cours →</p>  
+    </a>  <a class="door alt" href="coaching.html">  
+  <p class="kicker">Pour aller plus loin</p>  
+  <h2>Les coachings</h2>  
+  <p>  
+    Séances individuelles, en duo ou à distance, adaptées à vos envies  
+    et à vos objectifs.  
+  </p>  
+  <p>Découvrir les coachings →</p>  
+</a>
+
+  </section>    <section class="soft">  
+    <p class="kicker">À chacun sa pratique</p>  <h2>Envie d’une approche plus sportive ?</h2>  
+
+<p>  
+  Des créneaux spécifiques de <strong>pole sport</strong> peuvent  
+  être envisagés pour travailler davantage la technique, la force,  
+  les figures et les enchaînements sportifs.  
+</p>  
+
+<p>  
+  Cours collectifs, privés, semi-privés, duo, parent-enfant,  
+  stages à domicile ou coaching avec podium : plusieurs formats  
+  sont possibles selon vos besoins.  
+</p>  
+
+<a class="btn" href="contact.html">Parlons de votre projet</a>
+
+  </section>    <section class="pink-band">  
+    <p class="kicker">Votre pratique, votre rythme</p>  <h2>Pas de jugement. Pas de compétition. Juste vous.</h2>  
+
+<p>  
+  Que vous veniez pour découvrir la pole dance, reprendre confiance,  
+  développer votre force ou explorer une pratique sportive plus technique,  
+  votre place est ici.  
+</p>
+
+  </section>    <section>  
+    <p class="kicker">Votre studio</p>  <h2>Une parenthèse rien qu’à vous.</h2>  
+
+<p>  
+  À Soulières, à environ 15 minutes d’Épernay, Yog’n Moov vous  
+  accueille dans un studio intimiste, loin des grandes salles  
+  impersonnelles. Ici, on apprend, on rit, on recommence et on  
+  avance ensemble, sans jugement.  
+</p>  
+
+<a class="btn" href="studio.html">Découvrir le studio</a>
+
+  </section>    <div class="band">  
+    <p><strong>Les places sont limitées.</strong></p>  
+    <p>Contactez-moi pour connaître les créneaux disponibles.</p>  <p>  
+  <a href="tel:+33632514950">06 32 51 49 50</a>  
+  ·  
+  <a href="https://wa.me/33632514950">Écrire sur WhatsApp</a>  
+</p>
+
+  </div>  </main>  <footer>  
+  <p class="footer-brand">Yog'n Moov</p>    <p>Pole dance · Soulières (51130), près d’Épernay</p>    <p>  
+    <a href="tel:+33632514950">06 32 51 49 50</a>  
+    ·  
+    <a href="mailto:poledancejulie@gmail.com">Envoyer un e-mail</a>  
+  </p>    <div class="footer-yoga">  
+    <h3>Yog'n Moov · Yoga, Pilates et méditation</h3>  
+    <p>  
+      Retrouvez également mes activités de yoga, Pilates et méditation  
+      sur le site dédié.  
+    </p>  
+    <a href="https://www.yognmoov.fr" target="_blank" rel="noopener noreferrer">  
+      Visiter www.yognmoov.fr →  
+    </a>  
+  </div>    <p>  
+    <a href="https://www.facebook.com/share/17JPoeD2sn/">Facebook</a>  
+    ·  
+    <a href="https://instagram.com/yognmoov_julie">Instagram</a>  
+    ·  
+    <a href="https://www.tiktok.com/@yogn.moov">TikTok</a>  
+  </p>  
+</footer>  </body>  
 </html>
